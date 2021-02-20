@@ -1,0 +1,186 @@
+.layout {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    background: black;
+
+    .titleBar {
+        background: purple;
+        height: 48px;
+        background: var(--brand);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+        color: white;
+
+        .appTitle {
+            justify-self: start;
+            margin-left: 50px;
+            font-weight: bold;
+            font-size: 22px
+        }
+
+        .search {
+
+        }
+
+        .profile {
+
+        }
+    }
+
+    .menuAndContent {
+        flex: 1;
+        background: gray;
+        display: flex;
+        flex-direction: row;
+
+        .menu {
+            flex: 1;
+            max-width: 70px;
+            background-color: #EBEBEB;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 22px;
+
+            .top {
+                .menuItem:nth-last-child(2) {
+                    margin-bottom: 10px;
+                }
+            }
+
+            .bottom {
+                .menuItem:first-child {
+                    margin-bottom: 40px;
+                }
+
+                .menuItem:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            .menuItem {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 28px;
+
+                svg {
+                    height: 33px;
+                    width: 33px;
+                    margin-bottom: 3px;
+                    color: var(--gray);
+                }
+
+                span {
+                    font-size: 13px;
+                    font-family: inherit;
+                    font-weight: 400;
+                    color: var(--gray);
+                }
+
+                &:hover {
+                    cursor: pointer;
+
+                    svg {
+                        color: var(--brand)
+                    }
+
+                    span {
+                        color: var(--brand);
+                    }
+                }
+
+                .menuItem:before {
+                    border-radius: 5px;
+                    width: 3px;
+                    height: 35px;
+                    background-color: var(--brand);
+                    content: '';
+                }
+
+                &.active {
+                    margin-left: -8px;
+                    border-left: 3px solid var(--brand);
+
+                    svg {
+                        color: var(--brand)
+                    }
+
+                    span {
+                        color: var(--brand);
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        .subMenu {
+            display: flex;
+            flex-direction: column;
+            width: 321px;
+            background: #F0F0F0;
+
+            .subMenuHeader {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 18px 20px;
+                border-bottom: 1px solid #E1DFDD;
+
+                .subMenuTitle {
+                    display: flex;
+                    align-items: center;
+                    font-weight: bold;
+                    font-size: 24px;
+                    color: #242424;
+                }
+
+                .subMenuAction {
+                    display: flex;
+                    align-items: center;
+
+                    svg {
+                        cursor: pointer;
+                        height: 22px;
+                        width: 22px;
+                        color: var(--gray);
+                    }
+                }
+            }
+
+            .subMenuDescriptionHeader {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                margin: 8px;
+                padding: 5px 14px;
+                border-radius: 3px;
+                background: #fff;
+
+                svg {
+                    margin-right: 9px;
+                }
+
+                span {
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .content {
+            padding: 22px;
+            flex: 1;
+            background: #F5F5F5;
+        }
+
+    }
+
+
+}
+
+
+
