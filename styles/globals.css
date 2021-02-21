@@ -30,6 +30,10 @@ p, span {
     line-height: 1.15;
 }
 
-.ui-provider a {
-    background:inherit;
+.carousel .control-dots {
+  background: transparent !important;
+}
+
+.carousel .control-dots:focus {
+    outline: none !important;
 }

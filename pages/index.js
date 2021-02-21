@@ -5,24 +5,30 @@ const Home = () => {
     return (
         <Layout>
             <div>
-                <Carousel infiniteLoop={true} dynamicHeight={true} showThumbs={false} showArrows={true} onChange={()=>console.log('here')} onClickItem={()=>console.log('clicked to iyem')} onClickThumb={()=>console.log('thumb clicked')}>
+                <Carousel autoPlay={true} swipeable={true}
+                          infiniteLoop={true}
+                          dynamicHeight={true}
+                          showThumbs={false}
+                          showArrows={true} onChange={() => console.log('here')}
+                          onClickItem={() => console.log('clicked to iyem')}
+                          onClickThumb={() => console.log('thumb clicked')}>
                     <div>
-                        <img alt={"slider"} src={'/carousel/slide-item-1.png'} />
+                        <img alt={"slider"} src={'/carousel/slide-item-1.png'}/>
                     </div>
                     <div>
-                        <img alt={"slider"} src={'/carousel/slide-item-1.png'} />
+                        <img alt={"slider"} src={'/carousel/slide-item-1.png'}/>
                     </div>
                     <div>
-                        <img alt={"slider"} src={'/carousel/slide-item-1.png'} />
+                        <img alt={"slider"} src={'/carousel/slide-item-1.png'}/>
                     </div>
                     <div>
-                        <img alt={"slider"} src={'/carousel/slide-item-1.png'} />
+                        <img alt={"slider"} src={'/carousel/slide-item-1.png'}/>
                     </div>
                     <div>
-                        <img alt={"slider"} src={'/carousel/slide-item-1.png'} />
+                        <img alt={"slider"} src={'/carousel/slide-item-1.png'}/>
                     </div>
                     <div>
-                        <img alt={"slider"} src={'/carousel/slide-item-1.png'} />
+                        <img alt={"slider"} src={'/carousel/slide-item-1.png'}/>
                     </div>
                 </Carousel>
             </div>
