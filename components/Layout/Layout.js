@@ -1,7 +1,7 @@
 import React from "react";
 import styles from './layout.module.css'
 import cn from 'classnames'
-import {Activity, Calendar, Chat, Files, Help, MenuDivider, More, Settings, Store, Teams, SearchIcon} from "../icons";
+import {Activity, Calendar, Chat, Files, Help, MenuDivider, More, SearchIcon, Settings, Store, Teams} from "../icons";
 
 const Layout = ({children}) => {
     return (
