@@ -1,6 +1,7 @@
 .layout {
     display: flex;
     height: 100%;
+    width: 100%;
     flex-direction: column;
     background: black;
 
@@ -69,8 +70,8 @@
                 margin-bottom: 28px;
 
                 svg {
-                    height: 33px;
-                    width: 33px;
+                    height: 20px;
+                    width: 20px;
                     margin-bottom: 3px;
                     color: var(--gray);
                 }
@@ -135,7 +136,7 @@
                     display: flex;
                     align-items: center;
                     font-weight: bold;
-                    font-size: 24px;
+                    font-size: 20px;
                     color: #242424;
                 }
 
@@ -152,23 +153,73 @@
                 }
             }
 
-            .subMenuDescriptionHeader {
+            .subMenuContent {
                 display: flex;
-                align-items: center;
-                justify-content: flex-start;
-                margin: 8px;
-                padding: 5px 14px;
-                border-radius: 3px;
-                background: #fff;
+                flex-direction: column;
+                flex: 1;
 
-                svg {
-                    margin-right: 9px;
+                .subMenuDescriptionHeader {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    margin: 8px;
+                    padding: 5px 14px;
+                    border-radius: 3px;
+                    background: #fff;
+
+                    svg {
+                        margin-right: 9px;
+                    }
+
+                    span {
+                        font-weight: 700;
+                    }
                 }
 
-                span {
-                    font-weight: 700;
+                .subMenuContainer {
+                    display: flex;
+                    flex: 1;
+                    flex-direction: column;
+
+                    .links {
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        flex-direction: column;
+                        padding: 6px 48px;
+                        flex: 1;
+
+                        .linkHeader {
+                            margin: 4px 0;
+
+                            span {
+                                font-size: 14px;
+                                font-weight: bold;
+                            }
+                        }
+
+                        .subMenuLink {
+                            margin: 4px 0;
+
+                            span {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+
+                    .otherLinks {
+                        display: flex;
+                        flex-direction: column;
+                        border-top: 1px solid #E1DFDD;
+
+                        span {
+                            color: var(--brand);
+                            margin: 5px;
+                        }
+                    }
                 }
             }
+
         }
 
         .content {
