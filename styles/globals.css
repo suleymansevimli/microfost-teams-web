@@ -45,3 +45,9 @@ p, span {
 .ms-SearchBox {
     width: 100% !important;
 }
+
+.ms-Button {
+    justify-self: center;
+    background: transparent !important;
+    color: #fff;
+}

@@ -52,5 +52,18 @@
     justify-content: flex-end;
     width: 100%;
     margin-right: 75px;
+
+    .iconButton {
+        .ms-Button {
+            background: blue !important;
+        }
+        .root-77 {
+            background: none !important;
+        }
+        background: transparent !important;
+        button {
+            background: none !important;
+        }
+    }
 }
 
