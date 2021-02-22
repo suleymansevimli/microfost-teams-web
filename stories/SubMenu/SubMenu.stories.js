@@ -2,7 +2,7 @@ import React from "react";
 import SubMenuComp from "../../components/SubMenu/SubMenu";
 
 export default {
-    title: "Components/SubMenu",
+    title: "Components/Sub Menu",
     component: SubMenuComp
 }
 

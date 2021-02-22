@@ -2,7 +2,7 @@ import React from "react";
 import TitleBarComp from "../../components/TitleBar/TitleBar";
 
 export default {
-    title: "Components/TitleBar",
+    title: "Components/Title Bar",
     component: TitleBarComp
 }
 
