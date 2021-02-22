@@ -3,6 +3,7 @@ import '../styles/variable.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import {useEffect, useState} from "react";
 import Loader from "../components/Loader/Loader";
+import Router from 'next/router'
 
 function MyApp({Component, pageProps}) {
     const [loading, setLoading] = useState(true)
@@ -13,6 +14,13 @@ function MyApp({Component, pageProps}) {
         });
     }, [])
 
+    Router.onRouteChangeStart = (url) => {
+        setLoading(true)
+    }
+
+    Router.onRouteChangeComplete = (url) => {
+        setLoading(false)
+    }
 
     return (
         loading

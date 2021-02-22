@@ -1,11 +1,12 @@
 import React from 'react';
 import Layout from "../components/Layout/Layout";
 import Slider from "../components/Slider/Slider";
+import Link from 'next/link'
 
 const Home = () => {
     return (
         <Layout>
-            <Slider/>
+            <Link href={"/store"}> Go Store ! </Link>
         </Layout>
     )
 }
