@@ -1,4 +1,8 @@
 .titleBar {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 111;
     background: purple;
     height: 48px;
     background: var(--brand);
