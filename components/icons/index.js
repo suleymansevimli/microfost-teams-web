@@ -1,4 +1,6 @@
 export { default as Activity } from './Activity'
+export { default as ArrowLeft } from './ArrowLeft'
+export { default as ArrowRight } from './ArrowRight'
 export { default as Calendar } from './Calendar'
 export { default as Chat } from './Chat'
 export { default as Files } from './Files'

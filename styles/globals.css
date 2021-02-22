@@ -41,3 +41,7 @@ p, span {
 .carousel .control-dots:focus {
     outline: none !important;
 }
+
+.ms-SearchBox {
+    width: 100% !important;
+}

@@ -10,6 +10,7 @@
     grid-template-columns: repeat(3, 1fr);
     place-items: center;
     color: white;
+    overflow: hidden;
 
     .appTitle {
         justify-self: start;
@@ -19,10 +20,37 @@
     }
 
     .search {
-
+        display: flex;
+        align-items: center;
+        width: 100%;
     }
 
-    .profile {
+    .navigations {
+        display: flex;
 
+        svg {
+            margin: 0 4px;
+            font-size: 18px;
+            color: var(--gray);
+            cursor: pointer;
+            transition: 300ms color;
+
+            &:hover {
+                color: var(--white);
+            }
+
+            &.active {
+                color: var(--white);
+            }
+        }
     }
 }
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    margin-right: 75px;
+}
+
