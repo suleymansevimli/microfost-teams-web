@@ -3,9 +3,9 @@ import styles from "./menu.module.css"
 import {Activity, Calendar, Chat, Files, Help, MenuDivider, More, Settings, Store, Teams} from "../icons";
 import cn from "classnames";
 
-const Menu = () => {
+const Menu = ({className,style}) => {
     return (
-        <div className={styles.menu}>
+        <div style={style ? style : {}} className={cn([styles.menu, className ? className : ''])}>
             <div className={styles.top}>
                 <div className={styles.menuItem}>
                     <Activity/>

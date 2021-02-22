@@ -2,9 +2,9 @@ import React from "react";
 import styles from "./sub-menu.module.css"
 import {SearchIcon, Store} from "../icons";
 
-const SubMenu = () => {
+const SubMenu = ({style}) => {
     return (
-        <div className={styles.subMenu}>
+        <div style={style ? style : {}} className={styles.subMenu}>
             <div className={styles.subMenuHeader}>
                 <div className={styles.subMenuTitle}>
                     <h3>Store</h3>
@@ -25,6 +25,35 @@ const SubMenu = () => {
                         </div>
                         <div className={styles.subMenuLink}>
                             <span>Built by your org</span>
+                        </div>
+
+                        <br/>
+                        <div className={styles.linkHeader}>
+                            <span>Categories</span>
+                        </div>
+                        <div className={styles.subMenuLink}>
+                            <span>Analytics and BI</span>
+                        </div>
+                        <div className={styles.subMenuLink}>
+                            <span>Developer and IT</span>
+                        </div>
+                        <div className={styles.subMenuLink}>
+                            <span>Human Resources</span>
+                        </div>
+                        <div className={styles.subMenuLink}>
+                            <span>Marketing</span>
+                        </div>
+                        <div className={styles.subMenuLink}>
+                            <span>Productivity</span>
+                        </div>
+                        <div className={styles.subMenuLink}>
+                            <span>Project Management</span>
+                        </div>
+                        <div className={styles.subMenuLink}>
+                            <span>Sales and Support</span>
+                        </div>
+                        <div className={styles.subMenuLink}>
+                            <span>Social and Fun</span>
                         </div>
 
                         <br/>
