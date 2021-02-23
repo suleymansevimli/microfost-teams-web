@@ -44,4 +44,14 @@ p, span {
 
 .ms-SearchBox {
     width: 100% !important;
+    border-radius: 4px;
+    border:none;
+    position: relative;
+    background: #eee;
+
+
+    &:after {
+        border: none;
+        outline: none;
+    }
 }
