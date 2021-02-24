@@ -1,12 +1,14 @@
 import '../styles/globals.css';
 import '../styles/variable.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import {useEffect, useLayoutEffect, useState} from 'react';
+import React,{useState} from 'react';
 import Loader from '../components/Loader/Loader';
 import Router from 'next/router';
 import {Provider} from 'react-redux';
 import store from '../store/store';
 import StoreContext from '../context';
+
+React.useLayoutEffect = React.useEffect
 
 function MyApp({Component, pageProps}) {
     const [loading, setLoading] = useState(true);
@@ -20,12 +22,12 @@ function MyApp({Component, pageProps}) {
         localStorage.setItem('THEME', theme);
     };
 
-    useLayoutEffect(() => {
+    React.useLayoutEffect(() => {
         const theme = localStorage.getItem('THEME') || 'light';
         setTheme(theme);
     }, []);
 
-    useEffect(() => {
+    React.useEffect(() => {
         const $html = document.querySelector('html');
         $html.classList.remove('dark');
         $html.classList.remove('light');
@@ -33,11 +35,9 @@ function MyApp({Component, pageProps}) {
     }, [theme]);
 
     // loader
-    useEffect(() => {
+    React.useEffect(() => {
         window.addEventListener('load', function () {
-            setTimeout(() => {
-                setLoading(false);
-            }, 3000);
+            setLoading(false);
         });
     }, []);
 

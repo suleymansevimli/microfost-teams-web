@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useContext, useEffect, useLayoutEffect, useState} from 'react';
 import styles from './theme-select.module.css';
 import StoreContext from '../../context';
 
@@ -6,7 +6,7 @@ const ThemeSelect = () => {
 	const store = useContext(StoreContext);
 	const [check, setCheck] = useState(true);
 
-	useEffect(() => {
+	useLayoutEffect(() => {
 		store.theme === 'light' ? setCheck(true) : setCheck(false);
 	});
 
