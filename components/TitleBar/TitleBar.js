@@ -60,7 +60,7 @@ const TitleBar = () => {
 					<ArrowRight />
 				</div>
 				<SearchBox
-					style={{ width: '100%',borderRadius:4 }}
+					style={{ width: '100%', borderRadius: 4 }}
 					placeholder="Search or type a command"
 					onSearch={(newValue) => console.log('value is ' + newValue)}
 				/>

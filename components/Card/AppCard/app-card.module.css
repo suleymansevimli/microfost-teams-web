@@ -9,7 +9,8 @@
         align-items: center;
 
         img {
-            margin-right: 10px;
+            align-self: center;
+            margin: 0 9px 8px 0;
             max-width: 32px;
             max-height: 32px;
             object-fit: contain;
@@ -33,8 +34,10 @@
         }
 
     }
+
     .appContent {
         margin-top: 10px;
+
         .description {
             font-size: 14px;
             font-weight: 400;

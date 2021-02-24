@@ -5,13 +5,11 @@ import Layout from '../../components/Layout/Layout';
 import styles from '../../styles/store/index.module.css';
 import { List, ListColumn, ListRow } from '../../components/icons';
 import { CommandButton } from 'office-ui-fabric-react';
-import {initializeIcons} from 'office-ui-fabric-react/lib-commonjs/Icons'
-import { Rating, RatingSize } from 'office-ui-fabric-react/lib-commonjs/Rating';
-import AppCard from "../../components/Card/AppCard/AppCard";
+import { initializeIcons } from 'office-ui-fabric-react/lib-commonjs/Icons';
+import AppCard from '../../components/Card/AppCard/AppCard';
 
 const Store = () => {
 	initializeIcons(undefined, { disableWarnings: true });
-
 
 	// filter
 	const sortProps = {
@@ -28,6 +26,7 @@ const Store = () => {
 			}
 		]
 	};
+
 	const filterProps = {
 		items: [
 			{
@@ -42,6 +41,7 @@ const Store = () => {
 			}
 		]
 	};
+
 	const sortIcon = { iconName: 'Sort' };
 	const filterIcon = { iconName: 'Filter' };
 
@@ -93,40 +93,57 @@ const Store = () => {
 				<div className={styles.appList}>
 					<AppCard
 						image={'/apps/tech-support.png'}
-						name={"Tech Support"}
-						description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui..."}
-						rate={2.5}
+						name={'Tech Support'}
+						description={
+							'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...'
+						}
+						rate={3.2}
 					/>
 
 					<AppCard
 						image={'/apps/expenses.png'}
-					 	name={"Expenses"}
-					 	description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui..."}
-					 	rate={4.3}/>
+						name={'Expenses'}
+						description={
+							'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...'
+						}
+						rate={4.3}
+					/>
 
 					<AppCard
 						image={'/apps/shuttle.png'}
-						name={"Shuttle"}
-						description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui..."}
-						rate={2.5}/>
+						name={'Shuttle'}
+						description={
+							'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...'
+						}
+						rate={2.5}
+					/>
 
 					<AppCard
 						image={'/apps/time-off.png'}
-						name={"Time off"}
-						description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui..."}
-						rate={2.5}/>
+						name={'Time off'}
+						description={
+							'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...'
+						}
+						rate={2.5}
+					/>
 
 					<AppCard
 						image={'/apps/travel.png'}
-						name={"Travel"}
-						description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui..."}
-						rate={2.5}/>
+						name={'Travel'}
+						description={
+							'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...'
+						}
+						rate={2.5}
+					/>
 
 					<AppCard
 						image={'/apps/dining.png'}
-						name={"Dining"}
-						description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui..."}
-						rate={2.5}/>
+						name={'Dining'}
+						description={
+							'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...'
+						}
+						rate={2.5}
+					/>
 				</div>
 
 				<div className={styles.header}>
@@ -140,44 +157,59 @@ const Store = () => {
 				<div className={styles.appList}>
 					<AppCard
 						image={'/favicon.ico'}
-						name={"App Name"}
-						description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui..."}
-						rate={2.5} />
+						name={'App Name'}
+						description={
+							'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...'
+						}
+						rate={2.5}
+					/>
 
 					<AppCard
 						image={'/vercel.svg'}
-						name={"Vercel"}
-						description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui..."}
-						rate={4.3}/>
+						name={'Vercel'}
+						description={
+							'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...'
+						}
+						rate={4.3}
+					/>
 
 					<AppCard
 						image={'/logo/teams-logo.png'}
-						name={"Teams"}
-						description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui..."}
-						rate={2.5}/>
+						name={'Teams'}
+						description={
+							'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...'
+						}
+						rate={2.5}
+					/>
 
 					<AppCard
 						image={'/favicon.ico'}
-						name={"App Name 1"}
-						description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui..."}
-						rate={2.5}/>
+						name={'App Name 1'}
+						description={
+							'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...'
+						}
+						rate={2.5}
+					/>
 
 					<AppCard
 						image={'/vercel.svg'}
-						name={"App Name 2"}
-						description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui..."}
-						rate={2.5}/>
+						name={'App Name 2'}
+						description={
+							'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...'
+						}
+						rate={2.5}
+					/>
 
 					<AppCard
 						image={'/favicon.ico'}
-						name={"App Name 3"}
-						description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui..."}
-						rate={2.5}/>
+						name={'App Name 3'}
+						description={
+							'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...'
+						}
+						rate={2.5}
+					/>
 				</div>
-
 			</div>
-			<br />
-			<Link href={'/'}>Go Home ! </Link>
 		</Layout>
 	);
 };
