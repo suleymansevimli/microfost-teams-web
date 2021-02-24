@@ -7,19 +7,10 @@ import { List, ListColumn, ListRow } from '../../components/icons';
 import { CommandButton } from 'office-ui-fabric-react';
 import {initializeIcons} from 'office-ui-fabric-react/lib-commonjs/Icons'
 import { Rating, RatingSize } from 'office-ui-fabric-react/lib-commonjs/Rating';
+import AppCard from "../../components/Card/AppCard/AppCard";
 
 const Store = () => {
 	initializeIcons(undefined, { disableWarnings: true });
-
-	// rating
-	const [customIconStarRating, setCustomIconStarRating] = React.useState(2.5);
-
-	const onCustomIconStarChange = (ev, rating)=> {
-		setCustomIconStarRating(rating);
-	}
-	const getRatingComponentAriaLabel = (rating, maxRating) => {
-		return `Rating value is ${rating} of ${maxRating}`;
-	};
 
 
 	// filter
@@ -100,156 +91,42 @@ const Store = () => {
 					</div>
 				</div>
 				<div className={styles.appList}>
-					<div className={styles.appCard}>
-						<div className={styles.appInfo}>
-							<img src={'/apps/tech-support.png'} alt="logo" />
-							<div className={styles.information}>
-								<p>Tech Support</p>
-								<div className={styles.rating}>
-									<Rating
-										min={1}
-										max={5}
-										rating={customIconStarRating}
-										onChange={onCustomIconStarChange}
-										getAriaLabel={getRatingComponentAriaLabel}
-										ariaLabelFormat={'Select {0} of {1} stars'}
-										icon="StarburstSolid"
-										unselectedIcon="Starburst"
-										readOnly={true}
-									/>
-									<span>3.1</span>
-								</div>
-							</div>
-						</div>
-						<div className={styles.appContent}>
-							<p className={styles.description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...</p>
-						</div>
-					</div>
-					<div className={styles.appCard}>
-						<div className={styles.appInfo}>
-							<img src={'/apps/expenses.png'} alt="logo" />
-							<div className={styles.information}>
-								<p>Expenses</p>
-								<div className={styles.rating}>
-									<Rating
-										min={1}
-										max={5}
-										rating={customIconStarRating}
-										onChange={onCustomIconStarChange}
-										getAriaLabel={getRatingComponentAriaLabel}
-										ariaLabelFormat={'Select {0} of {1} stars'}
-										icon="StarburstSolid"
-										unselectedIcon="Starburst"
-										readOnly={true}
-									/>
-									<span>3.1</span>
-								</div>
-							</div>
-						</div>
-						<div className={styles.appContent}>
-							<p className={styles.description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...</p>
-						</div>
-					</div>
-					<div className={styles.appCard}>
-						<div className={styles.appInfo}>
-							<img src={'/apps/shuttle.png'} alt="logo" />
-							<div className={styles.information}>
-								<p>Shuttle</p>
-								<div className={styles.rating}>
-									<Rating
-										min={1}
-										max={5}
-										rating={customIconStarRating}
-										onChange={onCustomIconStarChange}
-										getAriaLabel={getRatingComponentAriaLabel}
-										ariaLabelFormat={'Select {0} of {1} stars'}
-										icon="StarburstSolid"
-										unselectedIcon="Starburst"
-										readOnly={true}
-									/>
-									<span>3.1</span>
-								</div>
-							</div>
-						</div>
-						<div className={styles.appContent}>
-							<p className={styles.description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...</p>
-						</div>
-					</div>
-					<div className={styles.appCard}>
-						<div className={styles.appInfo}>
-							<img src={'/apps/time-off.png'} alt="logo" />
-							<div className={styles.information}>
-								<p>Time Off</p>
-								<div className={styles.rating}>
-									<Rating
-										min={1}
-										max={5}
-										rating={customIconStarRating}
-										onChange={onCustomIconStarChange}
-										getAriaLabel={getRatingComponentAriaLabel}
-										ariaLabelFormat={'Select {0} of {1} stars'}
-										icon="StarburstSolid"
-										unselectedIcon="Starburst"
-										readOnly={true}
-									/>
-									<span>3.1</span>
-								</div>
-							</div>
-						</div>
-						<div className={styles.appContent}>
-							<p className={styles.description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...</p>
-						</div>
-					</div>
-					<div className={styles.appCard}>
-						<div className={styles.appInfo}>
-							<img src={'/apps/travel.png'} alt="logo" />
-							<div className={styles.information}>
-								<p>Travel</p>
-								<div className={styles.rating}>
-									<Rating
-										min={1}
-										max={5}
-										rating={customIconStarRating}
-										onChange={onCustomIconStarChange}
-										getAriaLabel={getRatingComponentAriaLabel}
-										ariaLabelFormat={'Select {0} of {1} stars'}
-										icon="StarburstSolid"
-										unselectedIcon="Starburst"
-										readOnly={true}
-									/>
-									<span>3.1</span>
-								</div>
-							</div>
-						</div>
-						<div className={styles.appContent}>
-							<p className={styles.description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...</p>
-						</div>
-					</div>
-					<div className={styles.appCard}>
-						<div className={styles.appInfo}>
-							<img src={'/apps/dining.png'} alt="logo" />
-							<div className={styles.information}>
-								<p>Dining</p>
-								<div className={styles.rating}>
-									<Rating
-										min={1}
-										max={5}
-										rating={customIconStarRating}
-										onChange={onCustomIconStarChange}
-										getAriaLabel={getRatingComponentAriaLabel}
-										ariaLabelFormat={'Select {0} of {1} stars'}
-										icon="StarburstSolid"
-										unselectedIcon="Starburst"
-										readOnly={true}
-									/>
-									<span>3.1</span>
-								</div>
-							</div>
-						</div>
-						<div className={styles.appContent}>
-							<p className={styles.description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...</p>
-						</div>
-					</div>
+					<AppCard
+						image={'/apps/tech-support.png'}
+						name={"Tech Support"}
+						description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui..."}
+						rate={2.5}
+					/>
+
+					<AppCard
+						image={'/apps/expenses.png'}
+					 	name={"Expenses"}
+					 	description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui..."}
+					 	rate={4.3}/>
+
+					<AppCard
+						image={'/apps/shuttle.png'}
+						name={"Shuttle"}
+						description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui..."}
+						rate={2.5}/>
+
+					<AppCard
+						image={'/apps/time-off.png'}
+						name={"Time off"}
+						description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui..."}
+						rate={2.5}/>
+
+					<AppCard
+						image={'/apps/travel.png'}
+						name={"Travel"}
+						description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui..."}
+						rate={2.5}/>
+
+					<AppCard
+						image={'/apps/dining.png'}
+						name={"Dining"}
+						description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui..."}
+						rate={2.5}/>
 				</div>
 
 				<div className={styles.header}>
@@ -261,156 +138,41 @@ const Store = () => {
 					</div>
 				</div>
 				<div className={styles.appList}>
-					<div className={styles.appCard}>
-						<div className={styles.appInfo}>
-							<img src={'/vercel.svg'} alt="logo" />
-							<div className={styles.information}>
-								<p>App Name</p>
-								<div className={styles.rating}>
-									<Rating
-										min={1}
-										max={5}
-										rating={customIconStarRating}
-										onChange={onCustomIconStarChange}
-										getAriaLabel={getRatingComponentAriaLabel}
-										ariaLabelFormat={'Select {0} of {1} stars'}
-										icon="StarburstSolid"
-										unselectedIcon="Starburst"
-										readOnly={true}
-									/>
-									<span>3.1</span>
-								</div>
-							</div>
-						</div>
-						<div className={styles.appContent}>
-							<p className={styles.description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...</p>
-						</div>
-					</div>
-					<div className={styles.appCard}>
-						<div className={styles.appInfo}>
-							<img src={'/favicon.ico'} alt="logo" />
-							<div className={styles.information}>
-								<p>Tech Support</p>
-								<div className={styles.rating}>
-									<Rating
-										min={1}
-										max={5}
-										rating={customIconStarRating}
-										onChange={onCustomIconStarChange}
-										getAriaLabel={getRatingComponentAriaLabel}
-										ariaLabelFormat={'Select {0} of {1} stars'}
-										icon="StarburstSolid"
-										unselectedIcon="Starburst"
-										readOnly={true}
-									/>
-									<span>3.1</span>
-								</div>
-							</div>
-						</div>
-						<div className={styles.appContent}>
-							<p className={styles.description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...</p>
-						</div>
-					</div>
-					<div className={styles.appCard}>
-						<div className={styles.appInfo}>
-							<img src={'/favicon.ico'} alt="logo" />
-							<div className={styles.information}>
-								<p>Tech Support</p>
-								<div className={styles.rating}>
-									<Rating
-										min={1}
-										max={5}
-										rating={customIconStarRating}
-										onChange={onCustomIconStarChange}
-										getAriaLabel={getRatingComponentAriaLabel}
-										ariaLabelFormat={'Select {0} of {1} stars'}
-										icon="StarburstSolid"
-										unselectedIcon="Starburst"
-										readOnly={true}
-									/>
-									<span>3.1</span>
-								</div>
-							</div>
-						</div>
-						<div className={styles.appContent}>
-							<p className={styles.description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...</p>
-						</div>
-					</div>
-					<div className={styles.appCard}>
-						<div className={styles.appInfo}>
-							<img src={'/favicon.ico'} alt="logo" />
-							<div className={styles.information}>
-								<p>Tech Support</p>
-								<div className={styles.rating}>
-									<Rating
-										min={1}
-										max={5}
-										rating={customIconStarRating}
-										onChange={onCustomIconStarChange}
-										getAriaLabel={getRatingComponentAriaLabel}
-										ariaLabelFormat={'Select {0} of {1} stars'}
-										icon="StarburstSolid"
-										unselectedIcon="Starburst"
-										readOnly={true}
-									/>
-									<span>3.1</span>
-								</div>
-							</div>
-						</div>
-						<div className={styles.appContent}>
-							<p className={styles.description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...</p>
-						</div>
-					</div>
-					<div className={styles.appCard}>
-						<div className={styles.appInfo}>
-							<img src={'/favicon.ico'} alt="logo" />
-							<div className={styles.information}>
-								<p>Tech Support</p>
-								<div className={styles.rating}>
-									<Rating
-										min={1}
-										max={5}
-										rating={customIconStarRating}
-										onChange={onCustomIconStarChange}
-										getAriaLabel={getRatingComponentAriaLabel}
-										ariaLabelFormat={'Select {0} of {1} stars'}
-										icon="StarburstSolid"
-										unselectedIcon="Starburst"
-										readOnly={true}
-									/>
-									<span>3.1</span>
-								</div>
-							</div>
-						</div>
-						<div className={styles.appContent}>
-							<p className={styles.description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...</p>
-						</div>
-					</div>
-					<div className={styles.appCard}>
-						<div className={styles.appInfo}>
-							<img src={'/favicon.ico'} alt="logo" />
-							<div className={styles.information}>
-								<p>Tech Support</p>
-								<div className={styles.rating}>
-									<Rating
-										min={1}
-										max={5}
-										rating={customIconStarRating}
-										onChange={onCustomIconStarChange}
-										getAriaLabel={getRatingComponentAriaLabel}
-										ariaLabelFormat={'Select {0} of {1} stars'}
-										icon="StarburstSolid"
-										unselectedIcon="Starburst"
-										readOnly={true}
-									/>
-									<span>3.1</span>
-								</div>
-							</div>
-						</div>
-						<div className={styles.appContent}>
-							<p className={styles.description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...</p>
-						</div>
-					</div>
+					<AppCard
+						image={'/favicon.ico'}
+						name={"App Name"}
+						description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui..."}
+						rate={2.5} />
+
+					<AppCard
+						image={'/vercel.svg'}
+						name={"Vercel"}
+						description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui..."}
+						rate={4.3}/>
+
+					<AppCard
+						image={'/logo/teams-logo.png'}
+						name={"Teams"}
+						description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui..."}
+						rate={2.5}/>
+
+					<AppCard
+						image={'/favicon.ico'}
+						name={"App Name 1"}
+						description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui..."}
+						rate={2.5}/>
+
+					<AppCard
+						image={'/vercel.svg'}
+						name={"App Name 2"}
+						description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui..."}
+						rate={2.5}/>
+
+					<AppCard
+						image={'/favicon.ico'}
+						name={"App Name 3"}
+						description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui..."}
+						rate={2.5}/>
 				</div>
 
 			</div>

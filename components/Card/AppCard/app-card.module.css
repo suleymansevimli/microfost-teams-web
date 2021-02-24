@@ -1,0 +1,47 @@
+.appCard {
+    padding: 14px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+
+    .appInfo {
+        display: flex;
+        align-items: center;
+
+        img {
+            margin-right: 10px;
+            max-width: 32px;
+            max-height: 32px;
+            object-fit: contain;
+        }
+
+        .information {
+            p {
+                font-weight: bold;
+            }
+
+            .rating {
+                display: flex;
+                align-items: center;
+
+                span {
+                    margin-left: 10px;
+                    font-size: 14px;
+                    color: #919090;
+                }
+            }
+        }
+
+    }
+    .appContent {
+        margin-top: 10px;
+        .description {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.35 !important;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #484644;
+        }
+    }
+}
