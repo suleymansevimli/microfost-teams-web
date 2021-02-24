@@ -1,5 +1,70 @@
 :root {
-    --brand : #464775;
-    --gray: #616161;
-    --white: #FFFFFF
+
+    /* Brand Colors */
+
+    --brand-50: #E9EAF6;
+    --brand-100: #DBDCF0;
+    --brand-200: #C7C9FF;
+    --brand-300: #B2B5FF;
+    --brand-400: #A6A7DC;
+    --brand-450: #9EA2FF;
+    --brand-500: #7479DC;
+    --brand-600: #6264A7;
+    --brand-700: #494B83;
+    --brand-800: #464775;
+    --brand-900: #3D3E66;
+    --brand-1000: #323348;
+
+    /* Neutral Colors */
+    --white: #FFFFFF;
+    --neutral-25: #FAFAFA;
+    --neutral-50: #F5F5F5;
+    --neutral-100: #F0F0F0;
+    --neutral-150: #EBEBEB;
+    --neutral-200: #E0E0E0;
+    --neutral-250: #C7C7C7;
+    --neutral-300: #B3B3B3;
+    --neutral-350: #949494;
+    --neutral-400: #8A8A8A;
+    --neutral-450: #616161;
+    --neutral-500: #424242;
+    --neutral-550: #3D3D3D;
+    --neutral-600: #333333;
+    --neutral-700: #292929;
+    --neutral-800: #1F1F1F;
+    --neutral-900: #0F0F0F;
+    --black: #000000;
+
+    /* Secondary Colors */
+
+    /* # red */
+    --red-50: #FCF4F6;
+    --red-100: #F3D6D8;
+    --red-400: #C4314B;
+    --red-600: #8E192E;
+
+    /* # orange */
+    --orange-50: #F9ECEA;
+    --orange-100: #EDC2A7;
+    --orange-400: #CC4A31;
+    --orange-600: #A33D2A;
+
+    /* # green */
+    --green-50: #E7F8D1;
+    --green-300: #6BB700;
+    --green-400: #13A10E;
+    --green-600: #237B4B;
+
+    /* # yellow */
+    --yellow-50: #FBF6D9;
+    --yellow-300: #F9EC02;
+    --yellow-400: #FFB900;
+    --yellow-600: #FFAA44;
+
+    /* # pink */
+    --pink-50: #FCF2FA;
+    --pink-100: #F1DFEE;
+    --pink-400: #B4009E;
+    --pink-600: #943670;
+
 }

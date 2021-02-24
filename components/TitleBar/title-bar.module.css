@@ -5,7 +5,7 @@
     z-index: 111;
     background: purple;
     height: 48px;
-    background: var(--brand);
+    background: var(--brand-800);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     place-items: center;
@@ -31,7 +31,7 @@
         svg {
             margin: 0 4px;
             font-size: 18px;
-            color: var(--gray);
+            color: var(--neutral-450);
             cursor: pointer;
             transition: 300ms color;
 
