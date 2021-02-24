@@ -15,7 +15,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding:10px;
+            padding: 10px;
             border: none;
             cursor: pointer;
 
@@ -43,6 +43,7 @@
 
         .sorting {
             margin-right: 10px;
+
             * {
                 color: #000;
             }
@@ -51,6 +52,85 @@
         .filterButton {
             * {
                 color: #000;
+            }
+        }
+    }
+}
+
+.content {
+
+
+    .header {
+        margin-top: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .contentTitle {
+            h3 {
+                font-weight: 600;
+                font-size: 16px;
+            }
+        }
+
+        .contentAction {
+            font-weight: 600;
+            color: var(--brand);
+            font-size: 16px;
+        }
+    }
+
+    .appList {
+        display: grid;
+        grid-template-columns:  repeat(auto-fill, minmax(368px, 1fr));;
+        grid-gap: 16px;
+        margin-top: 16px;
+
+        .appCard {
+            padding: 14px;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+
+            .appInfo {
+                display: flex;
+                align-items: center;
+
+                img {
+                    margin-right: 10px;
+                    max-width: 32px;
+                    max-height: 32px;
+                    object-fit: contain;
+                }
+
+                .information {
+                    p {
+                        font-weight: bold;
+                    }
+
+                    .rating {
+                        display: flex;
+                        align-items: center;
+
+                        span {
+                            margin-left: 10px;
+                            font-size: 14px;
+                            color: #919090;
+                        }
+                    }
+                }
+
+            }
+            .appContent {
+                margin-top: 10px;
+                .description {
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 1.35 !important;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    color: #484644;
+                }
             }
         }
     }

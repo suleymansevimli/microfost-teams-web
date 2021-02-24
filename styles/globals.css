@@ -55,3 +55,7 @@ p, span {
         outline: none;
     }
 }
+
+.ms-RatingStar-front {
+    color: var(--brand);
+}
