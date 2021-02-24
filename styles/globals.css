@@ -59,3 +59,7 @@ p, span {
 .ms-RatingStar-front {
     color: var(--brand);
 }
+
+.ms-RatingStar-back {
+    color: #ddd;
+}
