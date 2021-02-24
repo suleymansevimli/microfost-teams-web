@@ -50,7 +50,7 @@ const Store = () => {
 			<Slider />
 			<div className={styles.filter}>
 				<div className={styles.listing}>
-					<button>
+					<button className={styles.active}>
 						<ListRow />
 					</button>
 					<button>

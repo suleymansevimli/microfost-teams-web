@@ -13,7 +13,7 @@ const TitleBar = () => {
 	const examplePersona = {
 		imageUrl:
 			'https://avatars.githubusercontent.com/u/40808249?s=460&u=fef9ef6d701ded44f0631da84834ba99a0ce880e&v=4',
-		imageInitials: 'AL'
+		imageInitials: 'SS'
 	};
 
 	// dropdown menu

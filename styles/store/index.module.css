@@ -19,6 +19,12 @@
             border: none;
             cursor: pointer;
 
+            &.active {
+                svg {
+                    color: var(--brand);
+                }
+            }
+
             &:not(:last-child) {
                 border-right: 1px solid #ddd;
             }
