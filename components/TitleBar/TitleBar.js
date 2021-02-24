@@ -4,6 +4,7 @@ import { SearchBox } from 'office-ui-fabric-react/lib-commonjs/SearchBox';
 import { Persona, PersonaPresence, PersonaSize } from 'office-ui-fabric-react/lib-commonjs/Persona';
 import { CommandButton, initializeIcons } from 'office-ui-fabric-react';
 import { ArrowLeft, ArrowRight } from '../icons';
+import ThemeSelect from "../Theme/ThemeSelect";
 
 const TitleBar = () => {
 	// icons initialized
@@ -66,6 +67,7 @@ const TitleBar = () => {
 				/>
 			</div>
 			<div className={styles.profile}>
+				<ThemeSelect/>
 				<CommandButton text={<Personal />} menuProps={menuProps} disabled={false} checked={false} />
 			</div>
 		</div>

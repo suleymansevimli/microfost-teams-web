@@ -1,7 +1,5 @@
 :root {
-
     /* Brand Colors */
-
     --brand-50: #E9EAF6;
     --brand-100: #DBDCF0;
     --brand-200: #C7C9FF;
@@ -18,7 +16,7 @@
     /* Neutral Colors */
     --white: #FFFFFF;
     --neutral-25: #FAFAFA;
-    --neutral-50: #F5F5F5;
+    --neutral-50: #f5f5f5;
     --neutral-100: #F0F0F0;
     --neutral-150: #EBEBEB;
     --neutral-200: #E0E0E0;
@@ -67,4 +65,11 @@
     --pink-400: #B4009E;
     --pink-600: #943670;
 
+}
+
+.dark:root {
+    --brand-800: #323348;
+    --neutral-50: #252423;
+    --neutral-100: #292929;
+    --neutral-150: #333333;
 }

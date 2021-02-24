@@ -1,7 +1,7 @@
 .menu {
     flex: 1;
     max-width: 70px;
-    background-color: #EBEBEB;
+    background-color: var(--neutral-150);
     display: flex;
     flex-direction: column;
     align-items: center;
