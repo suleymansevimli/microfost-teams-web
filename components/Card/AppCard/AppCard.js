@@ -4,7 +4,7 @@ import styles from './app-card.module.css';
 import {Rating} from 'office-ui-fabric-react/lib-commonjs/Rating';
 import {initializeIcons} from 'office-ui-fabric-react/lib-commonjs/Icons';
 
-const AppCard = ({image, name, description, rate}) => {
+const AppCard = ({image, name, description, rate,onClick}) => {
 	// initialize icon
 	initializeIcons(undefined, {disableWarnings: true});
 
@@ -13,7 +13,7 @@ const AppCard = ({image, name, description, rate}) => {
 			<div className={styles.appInfo}>
 				<img src={image} alt="logo"/>
 				<div className={styles.information}>
-					<p>{name}</p>
+					<p onClick={()=>onClick()}>{name}</p>
 					<div className={styles.rating}>
 						<Rating
 							min={1}
@@ -40,7 +40,8 @@ AppCard.propTypes = {
 	image: PropTypes.string.isRequired,
 	name: PropTypes.string.isRequired,
 	description: PropTypes.string.isRequired,
-	rate: PropTypes.number.isRequired
+	rate: PropTypes.number.isRequired,
+	onClick: PropTypes.func
 }
 
 AppCard.defaultProps = {

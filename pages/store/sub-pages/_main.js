@@ -1,12 +1,17 @@
-import React from 'react';
+import React,{ useState } from 'react';
 import Slider from '../../../components/Slider/Slider';
 import styles from '../../../styles/store/index.module.css';
 import Link from 'next/link';
 import AppCard from '../../../components/Card/AppCard/AppCard';
 import Filter from '../../../components/Filter/Filter';
-import Modal from "../../../components/Dialog/Modal";
+import { useBoolean } from '@uifabric/react-hooks';
+import Modal from "../../../components/Modal/Modal";
 
 const Main = () => {
+
+	const [isModalOpen, setModalOpen] = useState(false);
+
+
 	return (
 		<>
 			<Slider/>
@@ -22,6 +27,7 @@ const Main = () => {
 				</div>
 				<div className={styles.appList}>
 					<AppCard
+						onClick={()=>setModalOpen(!isModalOpen)}
 						image={'/apps/tech-support.png'}
 						name={'Tech Support'}
 						description={
@@ -140,6 +146,9 @@ const Main = () => {
 					/>
 				</div>
 			</div>
+			<Modal isModalOpen={isModalOpen} onModalClose={()=>setModalOpen(!isModalOpen)}>
+				Content
+			</Modal>
 		</>
 	);
 };

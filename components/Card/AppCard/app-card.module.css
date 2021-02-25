@@ -18,8 +18,13 @@
 
         .information {
             p {
+                cursor: pointer;
                 color: var(--card-title);
                 font-weight: bold;
+
+                &:hover {
+                    text-decoration: underline;
+                }
             }
 
             .rating {

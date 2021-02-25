@@ -12,8 +12,7 @@ const Modal = ({children,isModalOpen,onModalClose}) => {
 
 	const cancelIcon = { iconName: 'Cancel' };
 
-	// const [isModalOpen, { setTrue: showModal, setFalse: hideModal }] = useBoolean(false);
-	// const [isDraggable, { toggle: toggleIsDraggable }] = useBoolean(true);
+
 
 	const titleId = useId('title');
 
