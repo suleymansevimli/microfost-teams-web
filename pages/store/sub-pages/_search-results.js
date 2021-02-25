@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import styles from '../../../styles/store/sub-pages/search-results.module.css';
 import AppCard from "../../../components/Card/AppCard/AppCard";
 import Filter from "../../../components/Filter/Filter";
@@ -36,3 +37,8 @@ const SearchResults = ({data, searchTerm}) => {
 };
 
 export default SearchResults;
+
+SearchResults.propTypes = {
+    data: PropTypes.array.isRequired,
+    searchTerm: PropTypes.string.isRequired
+}

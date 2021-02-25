@@ -40,6 +40,11 @@
     --search-close-icon-color: #0F0F0F;
     --search-close-icon-hover-color: #E0E0E0;
     --search-input-color: #0F0F0F;
+
+    --modal-background: #f5f5f5;
+    --modal-title-color: #292929;
+    --modal-close-icon-color: #808080;
+    --modal-close-icon-hover-background: #E0E0E0;
 }
 
 .dark:root {
@@ -83,4 +88,9 @@
     --search-close-icon-color: #FAFAFA;
     --search-input-color: #FAFAFA;
     --search-close-icon-hover-color: #3D3D3D;
+
+    --modal-background: #1F1F1F;
+    --modal-title-color: #C7C7C7;
+    --modal-close-icon-color: #808080;
+    --modal-close-icon-hover-background: #3D3D3D;
 }

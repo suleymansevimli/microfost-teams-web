@@ -4,6 +4,7 @@ import styles from '../../../styles/store/index.module.css';
 import Link from 'next/link';
 import AppCard from '../../../components/Card/AppCard/AppCard';
 import Filter from '../../../components/Filter/Filter';
+import Modal from "../../../components/Dialog/Modal";
 
 const Main = () => {
 	return (
