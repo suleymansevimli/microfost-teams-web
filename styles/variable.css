@@ -14,7 +14,7 @@
     --menu-item-hover: #464775;
 
     --submenu-background: #F0F0F0;
-    --submenu-header: #F0F0F0;
+    --submenu-header: #E0E0E0;
     --submenu-title: #242424;
     --submenu-icon: #616161;
     --submenu-description-header: #fff;
@@ -36,6 +36,10 @@
     --scrollbar-color: #323348;
     --scrollbar-active-color: #9EA2FF;
     --scrollbar-track-color: #FAFAFA;
+
+    --search-close-icon-color: #0F0F0F;
+    --search-close-icon-hover-color: #E0E0E0;
+    --search-input-color: #0F0F0F;
 }
 
 .dark:root {
@@ -75,4 +79,8 @@
     --scrollbar-color: #DBDCF0;
     --scrollbar-active-color: #9EA2FF;
     --scrollbar-track-color: #FAFAFA;
+
+    --search-close-icon-color: #FAFAFA;
+    --search-input-color: #FAFAFA;
+    --search-close-icon-hover-color: #3D3D3D;
 }

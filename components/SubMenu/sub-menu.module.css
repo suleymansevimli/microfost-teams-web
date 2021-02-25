@@ -30,6 +30,32 @@
                 color: var(--submenu-icon);
             }
         }
+
+        .searchInput {
+            width: 100%;
+            background: none !important;
+            border: none;
+            height: 100%;
+            color: var(--search-input-color);
+            font-weight: 700;
+            font-size: 18px;
+
+            &::placeholder {
+                font-weight: 400;
+                letter-spacing: 1px;
+            }
+        }
+
+        .closeSearch {
+            color: var(--search-close-icon-color);
+            cursor: pointer;
+            padding: 8px 10px;
+            border-radius: 50px;
+
+            &:hover {
+                background: var(--search-close-icon-hover-color);
+            }
+        }
     }
 
 
