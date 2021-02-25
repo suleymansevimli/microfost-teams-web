@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../../../styles/store/sub-pages/search-results.module.css';
 import AppCard from "../../../components/Card/AppCard/AppCard";
+import Filter from "../../../components/Filter/Filter";
 
 const SearchResults = ({data, searchTerm}) => {
 
@@ -24,7 +25,7 @@ const SearchResults = ({data, searchTerm}) => {
                 </p>
             </div>
             <div>
-                Filter burada olacak
+               <Filter/>
             </div>
 
             <div className={styles.content}>
