@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 1;
+
+    .title {
+        flex: 1;
+
+        p {
+            font-weight: 700;
+            font-size: 18px;
+            color: var(--submenu-link-header);
+
+            &.totalResult {
+                margin-top: 14px;
+                font-weight: 400;
+                font-size: 14px;
+                color: var(--submenu-link-header);
+            }
+        }
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns:  repeat(auto-fill, minmax(368px, 1fr));;
+        grid-gap: 16px;
+        margin-top: 16px;
+    }
+}

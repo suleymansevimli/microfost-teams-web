@@ -6,11 +6,13 @@ const storeSlice = createSlice({
     initialState: {
         apps: [...appJSON],
         searchResults: [],
+        searchTerm: '',
         loading: true
     },
     reducers: {
         search(state, action) {
-            state.searchResults = action.payload;
+            state.searchResults = action.payload.results;
+            state.searchTerm = action.payload.searchTerm;
             state.loading = false;
         }
     }
@@ -25,9 +27,9 @@ export const searchAsync = (searchTerm) => async dispatch => {
             return e.name.includes(searchTerm) || e.name.toLowerCase().includes(searchTerm.toLowerCase());
         })
 
-        await dispatch(search(results))
+        await dispatch(search({results, searchTerm}));
 
     } else {
-        await dispatch(search([]))
+        await dispatch(search({results: [], searchTerm: ""}))
     }
 }
