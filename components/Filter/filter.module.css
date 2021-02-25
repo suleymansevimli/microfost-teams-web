@@ -9,7 +9,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background: var(--white);
 
         button {
             display: flex;
@@ -18,15 +17,16 @@
             padding: 10px;
             border: none;
             cursor: pointer;
+            background: var(--listing-style-button-background);
 
             &.active {
                 svg {
-                    color: var(--brand-800);
+                    color: var(--listing-style-button-hover);
                 }
             }
 
             &:not(:last-child) {
-                border-right: 1px solid #ddd;
+                border-right: 1px solid var(--listing-style-button-border);
             }
 
             svg {
@@ -36,7 +36,7 @@
 
             &:hover {
                 svg {
-                    color: var(--brand-800);
+                    color: var(--listing-style-button-hover);
                 }
             }
 
@@ -51,13 +51,13 @@
             margin-right: 10px;
 
             * {
-                color: #000;
+                color: var(--filter-component-color);
             }
         }
 
         .filterButton {
             * {
-                color: #000;
+                color: var(--filter-component-color);
             }
         }
     }

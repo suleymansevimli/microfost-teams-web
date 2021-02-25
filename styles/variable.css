@@ -45,6 +45,14 @@
     --modal-title-color: #292929;
     --modal-close-icon-color: #808080;
     --modal-close-icon-hover-background: #E0E0E0;
+
+    --app-content-title: #333333;
+    --app-content-action-title: #464775;
+
+    --filter-component-color: #616161;
+    --listing-style-button-background: #FFFFFF;
+    --listing-style-button-hover: #464775;
+    --listing-style-button-border: #E0E0E0;
 }
 
 .dark:root {
@@ -93,4 +101,12 @@
     --modal-title-color: #C7C7C7;
     --modal-close-icon-color: #808080;
     --modal-close-icon-hover-background: #3D3D3D;
+
+    --app-content-title: #8A8A8A;
+    --app-content-action-title: #9EA2FF;
+
+    --filter-component-color: #F0F0F0;
+    --listing-style-button-background: #3D3D3D;
+    --listing-style-button-hover: #9EA2FF;
+    --listing-style-button-border: #616161;
 }

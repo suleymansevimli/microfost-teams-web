@@ -1,21 +1,33 @@
-import React,{ useState } from 'react';
+import React, { useState } from 'react';
 import Slider from '../../../components/Slider/Slider';
 import styles from '../../../styles/store/index.module.css';
 import Link from 'next/link';
 import AppCard from '../../../components/Card/AppCard/AppCard';
 import Filter from '../../../components/Filter/Filter';
-import { useBoolean } from '@uifabric/react-hooks';
-import Modal from "../../../components/Modal/Modal";
+import Modal from '../../../components/Modal/Modal';
+import { useSelector } from 'react-redux';
 
 const Main = () => {
-
+	const state = useSelector((state) => state.store);
 	const [isModalOpen, setModalOpen] = useState(false);
 
+	const RenderApps = () => {
+		return state.apps.slice(0, 6).map((e, i) => {
+			return <AppCard key={i} {...e} />;
+		});
+	};
+
+	const RenderWhatsNewsApp = () => {
+		const startInteger = Math.floor(Math.random() * 10);
+		return state.apps.slice(startInteger, startInteger + 6).map((e, i) => {
+			return <AppCard key={i} {...e} />;
+		});
+	};
 
 	return (
 		<>
-			<Slider/>
-			<Filter/>
+			<Slider />
+			<Filter />
 			<div className={styles.content}>
 				<div className={styles.header}>
 					<div className={styles.contentTitle}>
@@ -26,60 +38,7 @@ const Main = () => {
 					</div>
 				</div>
 				<div className={styles.appList}>
-					<AppCard
-						onClick={()=>setModalOpen(!isModalOpen)}
-						image={'/apps/tech-support.png'}
-						name={'Tech Support'}
-						description={
-							'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...'
-						}
-						rate={3.2}
-					/>
-
-					<AppCard
-						image={'/apps/expenses.png'}
-						name={'Expenses'}
-						description={
-							'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...'
-						}
-						rate={4.3}
-					/>
-
-					<AppCard
-						image={'/apps/shuttle.png'}
-						name={'Shuttle'}
-						description={
-							'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...'
-						}
-						rate={2.5}
-					/>
-
-					<AppCard
-						image={'/apps/time-off.png'}
-						name={'Time off'}
-						description={
-							'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...'
-						}
-						rate={2.5}
-					/>
-
-					<AppCard
-						image={'/apps/travel.png'}
-						name={'Travel'}
-						description={
-							'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...'
-						}
-						rate={2.5}
-					/>
-
-					<AppCard
-						image={'/apps/dining.png'}
-						name={'Dining'}
-						description={
-							'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...'
-						}
-						rate={2.5}
-					/>
+					<RenderApps />
 				</div>
 
 				<div className={styles.header}>
@@ -91,62 +50,10 @@ const Main = () => {
 					</div>
 				</div>
 				<div className={styles.appList}>
-					<AppCard
-						image={'/favicon.ico'}
-						name={'App Name'}
-						description={
-							'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...'
-						}
-						rate={2.5}
-					/>
-
-					<AppCard
-						image={'/vercel.svg'}
-						name={'Vercel'}
-						description={
-							'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...'
-						}
-						rate={4.3}
-					/>
-
-					<AppCard
-						image={'/logo/teams-logo.png'}
-						name={'Teams'}
-						description={
-							'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...'
-						}
-						rate={2.5}
-					/>
-
-					<AppCard
-						image={'/favicon.ico'}
-						name={'App Name 1'}
-						description={
-							'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...'
-						}
-						rate={2.5}
-					/>
-
-					<AppCard
-						image={'/vercel.svg'}
-						name={'App Name 2'}
-						description={
-							'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...'
-						}
-						rate={2.5}
-					/>
-
-					<AppCard
-						image={'/favicon.ico'}
-						name={'App Name 3'}
-						description={
-							'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dui a erat consequat porta quis a velit. Nullam consectetur adipiscing elit. Mauris sit amet dui...'
-						}
-						rate={2.5}
-					/>
+					<RenderWhatsNewsApp />
 				</div>
 			</div>
-			<Modal isModalOpen={isModalOpen} onModalClose={()=>setModalOpen(!isModalOpen)}>
+			<Modal isModalOpen={isModalOpen} onModalClose={() => setModalOpen(!isModalOpen)}>
 				Content
 			</Modal>
 		</>
