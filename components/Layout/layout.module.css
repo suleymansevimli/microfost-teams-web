@@ -11,7 +11,7 @@
         .content {
             padding: 22px;
             flex: 1;
-            background: var(--neutral-50);
+            background: var(--content-background);
         }
     }
 }

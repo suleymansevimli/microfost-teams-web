@@ -1,5 +1,6 @@
 import '../styles/globals.css';
 import '../styles/variable.css';
+import '../styles/all-colors.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import React, { useState } from 'react';
 import Loader from '../components/Loader/Loader';

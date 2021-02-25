@@ -47,7 +47,7 @@ p, span {
     border-radius: 4px;
     border:none;
     position: relative;
-    background: #eee;
+    background: var(--searchbox-background);
 
 
     &:after {
@@ -57,9 +57,43 @@ p, span {
 }
 
 .ms-RatingStar-front {
-    color: var(--brand-800);
+    color: var(--rating-star-front-color);
 }
 
 .ms-RatingStar-back {
-    color: #ddd;
+    color: var(--rating-star-back-color);
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 2px;
+}
+::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-color);
+    border: 0 none transparent;
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-active-color);
+}
+::-webkit-scrollbar-thumb:active {
+    background: var(--scrollbar-active-color);
+}
+::-webkit-scrollbar-track {
+    background: var(--scrollbar-track-color);
+    border: 0 none transparent;
+    border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+    background: #fff;
+}
+::-webkit-scrollbar-track:active {
+    background: #333333;
+}
+::-webkit-scrollbar-corner {
+    background: transparent;
 }

@@ -1,7 +1,7 @@
 .menu {
     flex: 1;
     max-width: 70px;
-    background-color: var(--neutral-150);
+    background-color: var(--menu-background);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,25 +35,25 @@
             height: 20px;
             width: 20px;
             margin-bottom: 3px;
-            color: var(--neutral-450);
+            color: var(--menu-item);
         }
 
         span {
             font-size: 13px;
             font-family: inherit;
             font-weight: 400;
-            color: var(--neutral-450);
+            color: var(--menu-item);
         }
 
         &:hover {
             cursor: pointer;
 
             svg {
-                color: var(--brand-800)
+                color: var(--menu-item-hover)
             }
 
             span {
-                color: var(--brand-800);
+                color: var(--menu-item-hover);
             }
         }
 
@@ -61,20 +61,20 @@
             border-radius: 5px;
             width: 3px;
             height: 35px;
-            background-color: var(--brand-800);
+            background-color: var(--menu-item-hover);
             content: '';
         }
 
         &.active {
             margin-left: -8px;
-            border-left: 3px solid var(--brand-800);
+            border-left: 3px solid var(--menu-item-hover);
 
             svg {
-                color: var(--brand-800)
+                color: var(--menu-item-hover)
             }
 
             span {
-                color: var(--brand-800);
+                color: var(--menu-item-hover);
                 font-weight: 600;
             }
         }

@@ -2,21 +2,21 @@
     display: flex;
     flex-direction: column;
     width: 321px;
-    background: var(--neutral-100);
+    background: var(--submenu-background);
 
     .subMenuHeader {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 18px 20px;
-        border-bottom: 1px solid #E1DFDD;
+        border-bottom: 1px solid var(--submenu-header);
 
         .subMenuTitle {
             display: flex;
             align-items: center;
             font-weight: bold;
             font-size: 20px;
-            color: #242424;
+            color: var(--submenu-title);
         }
 
         .subMenuAction {
@@ -27,10 +27,11 @@
                 cursor: pointer;
                 height: 22px;
                 width: 22px;
-                color: var(--neutral-450);
+                color: var(--submenu-icon);
             }
         }
     }
+
 
     .subMenuContent {
         display: flex;
@@ -45,13 +46,14 @@
             margin: 8px;
             padding: 5px 14px;
             border-radius: 3px;
-            background: var(--white);
+            background: var(--submenu-description-header);
 
             svg {
                 margin-right: 9px;
             }
 
             span {
+                color: var(--submenu-description-title);
                 font-weight: 700;
             }
         }
@@ -73,6 +75,7 @@
                     margin: 4px 0;
 
                     span {
+                        color: var(--submenu-link-header);
                         font-size: 14px;
                         font-weight: bold;
                     }
@@ -82,6 +85,7 @@
                     margin: 4px 0;
 
                     span {
+                        color: var(--submenu-link);
                         font-size: 14px;
                     }
                 }
@@ -90,10 +94,10 @@
             .otherLinks {
                 display: flex;
                 flex-direction: column;
-                border-top: 1px solid #E1DFDD;
+                border-top: 1px solid var(--submenu-header);
 
                 span {
-                    color: var(--brand-800);
+                    color: var(--other-links);
                     margin: 5px;
                 }
             }

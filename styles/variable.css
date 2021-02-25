@@ -1,75 +1,78 @@
 :root {
-    /* Brand Colors */
-    --brand-50: #E9EAF6;
-    --brand-100: #DBDCF0;
-    --brand-200: #C7C9FF;
-    --brand-300: #B2B5FF;
-    --brand-400: #A6A7DC;
-    --brand-450: #9EA2FF;
-    --brand-500: #7479DC;
-    --brand-600: #6264A7;
-    --brand-700: #494B83;
-    --brand-800: #464775;
-    --brand-900: #3D3E66;
-    --brand-1000: #323348;
+    /* renamed colors */
+    --card-background: #FFFFFF;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --text-small: #949494;
+    --card-content: #3D3D3D;
+    --card-title: #1F1F1F;
+    --content-background: #F5F5F5;
 
-    /* Neutral Colors */
-    --white: #FFFFFF;
-    --neutral-25: #FAFAFA;
-    --neutral-50: #f5f5f5;
-    --neutral-100: #F0F0F0;
-    --neutral-150: #EBEBEB;
-    --neutral-200: #E0E0E0;
-    --neutral-250: #C7C7C7;
-    --neutral-300: #B3B3B3;
-    --neutral-350: #949494;
-    --neutral-400: #8A8A8A;
-    --neutral-450: #616161;
-    --neutral-500: #424242;
-    --neutral-550: #3D3D3D;
-    --neutral-600: #333333;
-    --neutral-700: #292929;
-    --neutral-800: #1F1F1F;
-    --neutral-900: #0F0F0F;
-    --black: #000000;
+    --loader-background: #F0F0F0;
 
-    /* Secondary Colors */
+    --menu-background: #EBEBEB;
+    --menu-item: #616161;
+    --menu-item-hover: #464775;
 
-    /* # red */
-    --red-50: #FCF4F6;
-    --red-100: #F3D6D8;
-    --red-400: #C4314B;
-    --red-600: #8E192E;
+    --submenu-background: #F0F0F0;
+    --submenu-header: #F0F0F0;
+    --submenu-title: #242424;
+    --submenu-icon: #616161;
+    --submenu-description-header: #fff;
+    --submenu-description-title: #242424;
+    --submenu-link-header: #333333;
+    --submenu-link: #292929;
+    --other-links: #464775;
 
-    /* # orange */
-    --orange-50: #F9ECEA;
-    --orange-100: #EDC2A7;
-    --orange-400: #CC4A31;
-    --orange-600: #A33D2A;
+    --titlebar-background: #464775;
+    --titlebar-navigation: #616161;
+    --titlebar-navigation-hover: #FFFFFF;
+    --titlebar-navigation-active: #FFFFFF;
 
-    /* # green */
-    --green-50: #E7F8D1;
-    --green-300: #6BB700;
-    --green-400: #13A10E;
-    --green-600: #237B4B;
+    --searchbox-background: #E0E0E0;
 
-    /* # yellow */
-    --yellow-50: #FBF6D9;
-    --yellow-300: #F9EC02;
-    --yellow-400: #FFB900;
-    --yellow-600: #FFAA44;
+    --rating-star-front-color: #464775;
+    --rating-star-back-color: #ddd;
 
-    /* # pink */
-    --pink-50: #FCF2FA;
-    --pink-100: #F1DFEE;
-    --pink-400: #B4009E;
-    --pink-600: #943670;
-
+    --scrollbar-color: #323348;
+    --scrollbar-active-color: #9EA2FF;
+    --scrollbar-track-color: #FAFAFA;
 }
 
 .dark:root {
-    --brand-800: #323348;
-    --neutral-50: #252423;
-    --neutral-100: #292929;
-    --neutral-150: #333333;
+    --card-background: #333333;
+    --card-shadow: rgba(255, 255, 255, 0.1);
+    --text-small: #E0E0E0;
+    --card-content: #E0E0E0;
+    --card-title: #f5f5f5;
+    --content-background: #252423;
+
+    --loader-background: #292929;
+
+    --menu-background: #333333;
+    --menu-item: #E0E0E0;
+    --menu-item-hover: #9EA2FF;
+
+    --submenu-background: #292929;
+    --submenu-header: #FAFAFA;
+    --submenu-title: #E0E0E0;
+    --submenu-icon: #fff;
+    --submenu-description-header: #8A8A8A;
+    --submenu-description-title: #0F0F0F;
+    --submenu-link-header: #C7C7C7;
+    --submenu-link: #E0E0E0;
+    --other-links: #9EA2FF;
+
+    --titlebar-background: #3D3E66;
+    --titlebar-navigation: #616161;
+    --titlebar-navigation-hover: #FFFFFF;
+    --titlebar-navigation-active: #FFFFFF;
+
+    --searchbox-background: #E0E0E0;
+
+    --rating-star-front-color: #464775;
+    --rating-star-back-color: #424242;
+
+    --scrollbar-color: #DBDCF0;
+    --scrollbar-active-color: #9EA2FF;
+    --scrollbar-track-color: #FAFAFA;
 }
