@@ -17,6 +17,11 @@ const SubMenu = ({ style }) => {
 		await dispatch(searchAsync(val));
 	};
 
+	const closeSearch = () => {
+		setShowSearchInput(false)
+		dispatch(searchAsync(""))
+	}
+
 	const Search = React.useCallback(() => {
 		if (showSearchInput) {
 			return (
@@ -27,7 +32,7 @@ const SubMenu = ({ style }) => {
 						type="text"
 						onChange={(e) => onSearchInputChange(e.target.value)}
 					/>
-					<span className={styles.closeSearch} onClick={() => setShowSearchInput(false)}>
+					<span className={styles.closeSearch} onClick={() => closeSearch()}>
 						X
 					</span>
 				</>
