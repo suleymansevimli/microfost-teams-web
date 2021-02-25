@@ -10,8 +10,6 @@ const storeSlice = createSlice({
     },
     reducers: {
         search(state, action) {
-            console.log('state',state)
-            console.log('action',action)
             state.searchResults = action.payload;
             state.loading = false;
         }
@@ -21,14 +19,15 @@ const storeSlice = createSlice({
 export const {search} = storeSlice.actions
 export default storeSlice.reducer;
 
-export const searchAsync = (searchTerm)=> async dispatch => {
-   if (searchTerm) {
-       let results = appJSON.filter(e => {
-           return e.name.includes(searchTerm);
-       })
+export const searchAsync = (searchTerm) => async dispatch => {
+    if (searchTerm) {
+        let results = appJSON.filter(e => {
+            return e.name.includes(searchTerm) || e.name.toLowerCase().includes(searchTerm.toLowerCase());
+        })
 
-       await dispatch(search(results))
-   } else {
-       await dispatch(search([]))
-   }
+        await dispatch(search(results))
+
+    } else {
+        await dispatch(search([]))
+    }
 }

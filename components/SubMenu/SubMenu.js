@@ -48,7 +48,18 @@ const SubMenu = ({ style }) => {
 
 	const RenderMenu = () => {
 		if (state.searchResults.length > 0) {
-			return <div>result var</div>;
+			return state.searchResults.map((e, i) => {
+				return (
+					<>
+						<div className={styles.linkHeader}>
+							<span>{e.category}</span>
+						</div>
+						<div className={styles.subMenuLink}>
+							<span>{e.name}</span>
+						</div>
+					</>
+				);
+			});
 		}
 
 		return (
