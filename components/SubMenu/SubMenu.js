@@ -1,28 +1,35 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import styles from './sub-menu.module.css';
-import {SearchIcon, Store} from '../icons';
-import {useDispatch, useSelector} from 'react-redux';
-import {searchAsync} from "../../store/reducers/storeReducer";
+import { SearchIcon, Store } from '../icons';
+import { useDispatch, useSelector } from 'react-redux';
+import { searchAsync } from '../../store/reducers/storeReducer';
 
-const SubMenu = ({style}) => {
+const SubMenu = ({ style }) => {
 	const [showSearchInput, setShowSearchInput] = useState(false);
-	const [searchTerm,setSearchTerm] = useState('')
+	const [searchTerm, setSearchTerm] = useState('');
 
 	// redux
 	const state = useSelector((state) => state.store);
 	const dispatch = useDispatch();
 
 	const onSearchInputChange = async (val) => {
-		await setSearchTerm(val)
-		await dispatch(searchAsync(val))
-	}
+		await setSearchTerm(val);
+		await dispatch(searchAsync(val));
+	};
 
 	const Search = React.useCallback(() => {
 		if (showSearchInput) {
 			return (
 				<>
-					<input placeholder={'type here ...'} className={styles.searchInput} type="text" onChange={(e)=>onSearchInputChange(e.target.value)}/>
-					<span className={styles.closeSearch} onClick={()=>setShowSearchInput(false)}>X</span>
+					<input
+						placeholder={'type here ...'}
+						className={styles.searchInput}
+						type="text"
+						onChange={(e) => onSearchInputChange(e.target.value)}
+					/>
+					<span className={styles.closeSearch} onClick={() => setShowSearchInput(false)}>
+						X
+					</span>
 				</>
 			);
 		}
@@ -33,19 +40,15 @@ const SubMenu = ({style}) => {
 					<h3>Store</h3>
 				</div>
 				<div className={styles.subMenuAction}>
-					<SearchIcon onClick={() => setShowSearchInput(true)}/>
+					<SearchIcon onClick={() => setShowSearchInput(true)} />
 				</div>
 			</>
 		);
 	}, [showSearchInput]);
 
-	const RenderMenu = ()=>{
+	const RenderMenu = () => {
 		if (state.searchResults.length > 0) {
-			return (
-				<div>
-					result var
-				</div>
-			)
+			return <div>result var</div>;
 		}
 
 		return (
@@ -57,7 +60,7 @@ const SubMenu = ({style}) => {
 					<span>Built by your org</span>
 				</div>
 
-				<br/>
+				<br />
 				<div className={styles.linkHeader}>
 					<span>Categories</span>
 				</div>
@@ -86,7 +89,7 @@ const SubMenu = ({style}) => {
 					<span>Social and Fun</span>
 				</div>
 
-				<br/>
+				<br />
 				<div className={styles.linkHeader}>
 					<span>Categories</span>
 				</div>
@@ -115,7 +118,7 @@ const SubMenu = ({style}) => {
 					<span>Social and Fun</span>
 				</div>
 
-				<br/>
+				<br />
 				<div className={styles.linkHeader}>
 					<span>Industries</span>
 				</div>
@@ -138,22 +141,21 @@ const SubMenu = ({style}) => {
 					<span>Retail</span>
 				</div>
 			</>
-		)
-	}
+		);
+	};
 
 	const DescriptionHeader = () => {
-		
-		const text = searchTerm && searchTerm.length ? `All results (${state.searchResults.length})` : 'Apps';
+		const text =
+			searchTerm && searchTerm.length ? `All results (${state.searchResults.length})` : 'Apps';
 		const icon = searchTerm && searchTerm.length ? '' : <Store />;
-		
+
 		return (
 			<div className={styles.subMenuDescriptionHeader}>
 				{icon}
 				<span>{text}</span>
 			</div>
 		);
-	}
-
+	};
 
 	return (
 		<div style={style ? style : {}} className={styles.subMenu}>
@@ -161,7 +163,7 @@ const SubMenu = ({style}) => {
 				<Search />
 			</div>
 			<div className={styles.subMenuContent}>
-				<DescriptionHeader/>
+				<DescriptionHeader />
 				<div className={styles.subMenuContainer}>
 					<div className={styles.links}>
 						<RenderMenu />
