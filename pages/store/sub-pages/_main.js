@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState, useMemo, useCallback} from 'react';
 import Slider from '../../../components/Slider/Slider';
 import styles from '../../../styles/store/index.module.css';
 import Link from 'next/link';
@@ -6,23 +6,28 @@ import AppCard from '../../../components/Card/AppCard/AppCard';
 import Filter from '../../../components/Filter/Filter';
 import Modal from '../../../components/Modal/Modal';
 import { useSelector } from 'react-redux';
+import AppDetail from "../../../components/Modal/Body/AppDetail/AppDetail";
 
 const Main = () => {
 	const state = useSelector((state) => state.store);
 	const [isModalOpen, setModalOpen] = useState(false);
+	const [appId,setAppId] = useState(null)
 
-	const RenderApps = () => {
-		return state.apps.slice(0, 6).map((e, i) => {
-			return <AppCard key={i} {...e} />;
-		});
-	};
 
-	const RenderWhatsNewsApp = () => {
-		const startInteger = Math.floor(Math.random() * 10);
-		return state.apps.slice(startInteger, startInteger + 6).map((e, i) => {
-			return <AppCard key={i} {...e} />;
-		});
-	};
+	const onAppCardClick = async (e) => {
+		await setAppId(e.id)
+		await setModalOpen(!isModalOpen)
+	}
+
+	const RenderApps = useCallback(()=>state.apps.slice(0, 6).map((e, i) => {
+		return <AppCard key={i} {...e} onClick={() => onAppCardClick(e)} />;
+	}),[state.apps])
+
+
+	const RenderWhatsNewsApp = useCallback(()=> state.apps.slice(10, 10 + 6).map((e, i) => {
+		return <AppCard key={i} {...e} onClick={()=>onAppCardClick(e)} />;
+	}),[state.apps])
+
 
 	return (
 		<>
@@ -38,7 +43,7 @@ const Main = () => {
 					</div>
 				</div>
 				<div className={styles.appList}>
-					<RenderApps />
+					<RenderApps index={6}/>
 				</div>
 
 				<div className={styles.header}>
@@ -54,7 +59,7 @@ const Main = () => {
 				</div>
 			</div>
 			<Modal isModalOpen={isModalOpen} onModalClose={() => setModalOpen(!isModalOpen)}>
-				Content
+				<AppDetail appId={appId}/>
 			</Modal>
 		</>
 	);

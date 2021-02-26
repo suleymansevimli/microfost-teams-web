@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './modal.module.css';
-import { useBoolean, useId } from '@uifabric/react-hooks';
+import { useId } from '@uifabric/react-hooks';
 import { ContextualMenu, IconButton, Modal as OfficeUIModal } from 'office-ui-fabric-react';
 
-const Modal = ({children,isModalOpen,onModalClose}) => {
+const Modal = ({children,isModalOpen,onModalClose,title}) => {
 	const dragOptions = {
 		moveMenuItemText: 'Move',
 		closeMenuItemText: 'Close',
@@ -11,9 +11,6 @@ const Modal = ({children,isModalOpen,onModalClose}) => {
 	};
 
 	const cancelIcon = { iconName: 'Cancel' };
-
-
-
 	const titleId = useId('title');
 
 	return (
@@ -27,7 +24,7 @@ const Modal = ({children,isModalOpen,onModalClose}) => {
 			dragOptions={dragOptions ? dragOptions : undefined}
 		>
 			<div className={styles.header}>
-				<span id={titleId} className={styles.modalTitle}>Lorem Ipsum</span>
+				<span id={titleId} className={styles.modalTitle}>{title}</span>
 				<IconButton
 					className={styles.closeIcon}
 					iconProps={cancelIcon}
@@ -42,4 +39,4 @@ const Modal = ({children,isModalOpen,onModalClose}) => {
 	);
 };
 
-export default Modal;
+export default React.memo(Modal);
