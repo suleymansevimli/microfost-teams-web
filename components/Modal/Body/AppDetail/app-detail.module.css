@@ -49,24 +49,56 @@
         margin-top: 32px;
 
         .about {
+            height: 600px;
             flex: 1;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
+            justify-content: space-between;
 
             .addButtonContainer {
+                .addButton {
+                    background: var(--brand-800);
+                    color: var(--white);
+                    width: 30vh !important;
+                    border: none;
+                    border-radius: 4px !important;
+                    height: 32px;
+                    margin: 0;
+                    padding: 0;
+                }
 
+                .aboutMenu {
+                    margin-top: 20px;
+
+                    .header {
+                        h3 {
+                            font-weight: 700;
+                            font-size: 18px;
+                        }
+                    }
+
+                    .menuItem {
+                        margin: 20px 0;
+
+                        * {
+                            text-decoration: none;
+                            color: var(--neutral-500);
+                        }
+
+                        *:hover {
+                            text-decoration: none;
+                        }
+                    }
+                }
             }
 
-            .addButton {
-                background: var(--brand-800);
-                color: var(--white);
-                width: 25vh !important;
-                border: none;
-                border-radius: 4px !important;
-                height: 32px;
-                margin: 0;
-                padding: 0;
+            .bottomAbout {
+                width: 100%;
+
+                span {
+                    color: var(--brand-800)
+                }
             }
         }
 

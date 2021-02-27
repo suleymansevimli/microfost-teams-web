@@ -2,7 +2,6 @@
    display: flex;
    flex-direction: column;
    background: var(--modal-background);
-   min-width: 50%;
    padding: 30px;
 
    .header {
@@ -27,3 +26,20 @@
       /* \_(^_^)_/ */
    }
 }
+
+.min50 {
+   min-width: 50%;
+}
+
+.min60 {
+   min-width: 60%;
+}
+
+.min70 {
+   min-width: 70%;
+}
+
+.min80 {
+   min-width: 80%;
+}
+

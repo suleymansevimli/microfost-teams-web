@@ -1,9 +1,10 @@
-import React, {useLayoutEffect, useState} from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 import styles from './app-detail.module.css';
 import apps from '../../../../mockdata/app/app.json';
-import {DefaultButton, HighContrastSelector, IconButton} from 'office-ui-fabric-react';
+import { DefaultButton, IconButton } from 'office-ui-fabric-react';
+import {Link} from "office-ui-fabric-react/lib-commonjs";
 
-const AppDetail = ({appId, onModalClose}) => {
+const AppDetail = ({ appId, onModalClose }) => {
 	const [app, setApp] = useState({});
 
 	useLayoutEffect(() => {
@@ -11,19 +12,19 @@ const AppDetail = ({appId, onModalClose}) => {
 		setApp(content[0]);
 	}, []);
 
-	const cancelIcon = {iconName: 'Cancel'};
+	const cancelIcon = { iconName: 'Cancel' };
 
 	const menuProps = {
 		items: [
 			{
 				key: 'emailMessage',
 				text: 'Email message',
-				iconProps: {iconName: 'Mail'}
+				iconProps: { iconName: 'Mail' }
 			},
 			{
 				key: 'calendarEvent',
 				text: 'Calendar event',
-				iconProps: {iconName: 'Calendar'}
+				iconProps: { iconName: 'Calendar' }
 			}
 		]
 	};
@@ -33,12 +34,15 @@ const AppDetail = ({appId, onModalClose}) => {
 			backgroundColor: 'var(--brand-800)',
 			width: 28,
 			border: 'none',
-			borderTopLeftRadius:4,
-			borderBottomLeftRadius:4,
+			borderTopLeftRadius: 4,
+			borderBottomLeftRadius: 4,
 			color: 'white',
 			'&:hover': {
 				backgroundColor: 'none'
 			}
+		},
+		splitButtonMenuIcon: {
+			color: 'white'
 		},
 		splitButtonDivider: {
 			backgroundColor: '#c8c8c8',
@@ -48,16 +52,14 @@ const AppDetail = ({appId, onModalClose}) => {
 			top: 4,
 			bottom: 4
 		},
-		splitButtonContainer: {
-
-		}
+		splitButtonContainer: {}
 	};
 
 	return (
 		<div className={styles.container}>
 			<div className={styles.header}>
 				<div className={styles.information}>
-					<img className={styles.image} src={app.image} alt={app.name}/>
+					<img className={styles.image} src={app.image} alt={app.name} />
 					<div className={styles.nameAndCategory}>
 						<h4>{app.name}</h4>
 						<p>{app.category}</p>
@@ -85,11 +87,25 @@ const AppDetail = ({appId, onModalClose}) => {
 							checked={false}
 							styles={customSplitButtonStyles}
 						/>
+
+						<div className={styles.aboutMenu}>
+							<div className={styles.header}>
+								<h3>About</h3>
+							</div>
+							<div className={styles.menuItem}>
+								<Link href={"/"}>More from Microsoft</Link>
+							</div>
+							<div className={styles.menuItem}>
+								<Link href={"/"}>Permissions</Link>
+							</div>
+						</div>
 					</div>
-					<div>denenenen</div>
+					<div className={styles.bottomAbout}>
+						<span>By using {app.name}, you agree to the privacy policy and terms of use.</span>
+					</div>
 				</div>
 				<div className={styles.description}>
-
+					description
 				</div>
 			</div>
 		</div>

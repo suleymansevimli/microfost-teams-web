@@ -63,7 +63,7 @@ const Main = () => {
 					<RenderWhatsNewsApp />
 				</div>
 			</div>
-			<Modal isModalOpen={isModalOpen} onModalClose={() => setModalOpen(!isModalOpen)}>
+			<Modal width={'min60'} isModalOpen={isModalOpen} onModalClose={() => setModalOpen(!isModalOpen)}>
 				<AppDetail appId={appId} onModalClose={()=>setModalOpen(!isModalOpen)}/>
 			</Modal>
 		</>
