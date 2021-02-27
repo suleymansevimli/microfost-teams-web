@@ -74,6 +74,7 @@
 
                     .header {
                         h3 {
+                            color: var(--app-detail-modal-about-header);
                             font-weight: 700;
                             font-size: 18px;
                         }
@@ -84,7 +85,7 @@
 
                         * {
                             text-decoration: none;
-                            color: var(--neutral-500);
+                            color: var(--app-detail-modal-menu-item-color);
                         }
 
                         *:hover {
@@ -98,7 +99,7 @@
                 width: 100%;
 
                 span {
-                    color: var(--brand-800)
+                    color: var(--app-detail-modal-bottom-privacy-policy-text)
                 }
             }
         }
@@ -120,12 +121,14 @@
 
             .descriptionContent {
                 h4 {
+                    color: var(--app-detail-modal-description-header);
                     font-weight: 600;
                     font-size: 18px;
                     margin: 10px 0 10px 0;
                 }
 
                 p {
+                    color: var(--app-detail-modal-description);
                     line-height: 1.5;
                 }
 
