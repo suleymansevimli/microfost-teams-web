@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, {memo, useCallback, useState} from 'react';
 import Slider from '../../../components/Slider/Slider';
 import styles from '../../../styles/store/index.module.css';
 import Link from 'next/link';
@@ -18,19 +18,19 @@ const Main = () => {
 		await setModalOpen(!isModalOpen);
 	};
 
-	const RenderApps = useCallback(
-		() =>
-			state.apps.slice(0, 6).map((e, i) => {
-				return <AppCard key={i} {...e} onClick={() => onAppCardClick(e)} />;
-			}),
-		[state.apps]
-	);
+	const RenderApps = useCallback(() => {
+		return state.apps.slice(0, 6).map((e, i) => {
+			return <AppCard key={i} {...e} onClick={() => onAppCardClick(e)} />;
+		});
+	}, [state.apps]);
 
 	const RenderWhatsNewsApp = useCallback(
-		() =>
-			state.apps.slice(10, 16).map((e, i) => {
+		() =>{
+			let sliceStart = Math.floor(Math.random()*10);
+			return state.apps.slice(sliceStart, sliceStart+6).map((e, i) => {
 				return <AppCard key={i} {...e} onClick={() => onAppCardClick(e)} />;
-			}),
+			})
+		},
 		[state.apps]
 	);
 
@@ -64,7 +64,7 @@ const Main = () => {
 				</div>
 			</div>
 			<Modal isModalOpen={isModalOpen} onModalClose={() => setModalOpen(!isModalOpen)}>
-				<AppDetail appId={appId} />
+				<AppDetail appId={appId} onModalClose={()=>setModalOpen(!isModalOpen)}/>
 			</Modal>
 		</>
 	);

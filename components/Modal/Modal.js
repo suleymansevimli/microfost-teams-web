@@ -15,22 +15,30 @@ const Modal = ({children,isModalOpen,onModalClose,title}) => {
 
 	return (
 		<OfficeUIModal
+			topOffsetFixed={true}
 			titleAriaId={titleId}
 			isOpen={isModalOpen}
 			responsiveMode={true}
 			onDismiss={onModalClose}
 			isBlocking={false}
 			containerClassName={styles.container}
-			dragOptions={dragOptions ? dragOptions : undefined}
+			dragOptions={undefined}
 		>
 			<div className={styles.header}>
-				<span id={titleId} className={styles.modalTitle}>{title}</span>
+				{ title &&
+					<>
+					<span id={titleId} className={styles.modalTitle}>
+						{title}
+					</span>
+
 				<IconButton
 					className={styles.closeIcon}
 					iconProps={cancelIcon}
 					ariaLabel="Close popup modal"
 					onClick={onModalClose}
 				/>
+					</>
+				}
 			</div>
 			<div className={styles.body}>
 				{children}

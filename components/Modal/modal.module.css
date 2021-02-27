@@ -15,6 +15,7 @@
       }
 
       .closeIcon {
+         justify-self: flex-end;
          color: var(--modal-close-icon-color);
          &:hover {
             background: var(--modal-close-icon-hover-background)

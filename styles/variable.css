@@ -53,6 +53,9 @@
     --listing-style-button-background: #FFFFFF;
     --listing-style-button-hover: #464775;
     --listing-style-button-border: #E0E0E0;
+
+    --app-detail-modal-app-name-color: #1F1F1F;
+    --app-detail-modal-app-category-color: #1F1F1F;
 }
 
 .dark:root {
@@ -109,4 +112,7 @@
     --listing-style-button-background: #3D3D3D;
     --listing-style-button-hover: #9EA2FF;
     --listing-style-button-border: #616161;
+
+    --app-detail-modal-app-name-color: #F0F0F0;
+    --app-detail-modal-app-category-color: #E0E0E0;
 }
