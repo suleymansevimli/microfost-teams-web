@@ -16,7 +16,7 @@ const Store = () => {
 	};
 
 	return (
-		<Layout>
+		<Layout subMenu>
 			<Render />
 		</Layout>
 	);

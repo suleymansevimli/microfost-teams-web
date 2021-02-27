@@ -1,0 +1,70 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0px 10px 6px 10px;
+
+    .main {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        .information {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .appLogo {
+                height: 50px;
+                width: 50px;
+                margin-right: 18px;
+            }
+
+            h4 {
+                font-weight: bold;
+                font-size: 24px;
+            }
+        }
+
+        .tabs {
+            margin-top: 5px;
+            display: flex;
+            align-items: center;
+
+            .tab {
+                span {
+                    cursor: pointer;
+                    font-weight: 400;
+                    margin-left: 25px;
+
+                    &:hover {
+                        padding-bottom: 15px;
+                        border-bottom: 3px solid var(--brand-800);
+                    }
+
+                    &.active {
+                        padding-bottom: 15px;
+                        border-bottom: 3px solid var(--brand-800);
+                    }
+                }
+            }
+        }
+    }
+
+    .actions {
+        display: flex;
+        svg {
+            cursor: pointer;
+            height: 20px;
+            width: 20px;
+            color: #242424;
+            margin-right: 25px;
+            transition: 300ms color;
+
+            &:hover {
+                color: var(--brand-800);
+            }
+        }
+    }
+}

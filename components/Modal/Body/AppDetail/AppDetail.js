@@ -3,6 +3,7 @@ import styles from './app-detail.module.css';
 import apps from '../../../../mockdata/app/app.json';
 import { DefaultButton, IconButton } from 'office-ui-fabric-react';
 import {Link} from "office-ui-fabric-react/lib-commonjs";
+import {useRouter} from "next/router";
 
 const AppDetail = ({ appId, onModalClose }) => {
 	const [app, setApp] = useState({});
@@ -55,6 +56,8 @@ const AppDetail = ({ appId, onModalClose }) => {
 		splitButtonContainer: {}
 	};
 
+	const router = useRouter();
+
 	return (
 		<div className={styles.container}>
 			<div className={styles.header}>
@@ -82,7 +85,7 @@ const AppDetail = ({ appId, onModalClose }) => {
 							splitButtonAriaLabel="See 2 options"
 							aria-roledescription="split button"
 							menuProps={menuProps}
-							onClick={() => alert('clicked')}
+							onClick={() => router.push('/apps/contoso')}
 							disabled={false}
 							checked={false}
 							styles={customSplitButtonStyles}

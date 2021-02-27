@@ -4,30 +4,30 @@ import TitleBar from "../TitleBar/TitleBar";
 import Menu from "../Menu/Menu";
 import SubMenu from "../SubMenu/SubMenu";
 
-const Layout = ({children}) => {
+const Layout = ({children,subMenu,style}) => {
 
     const menuStyle = {height: window.innerHeight - 48, position: 'sticky', top: 48}
     const subMenuStyle = {height: window.innerHeight-48,position: 'sticky', top: 48}
 
     return (
-        <div className={styles.layout}>
-            <TitleBar/>
+			<div className={styles.layout}>
+				<TitleBar />
 
-            <div className={styles.menuAndContent}>
-                <div>
-                    <Menu style={menuStyle}/>
-                </div>
+				<div className={styles.menuAndContent}>
+					<div>
+						<Menu style={menuStyle} />
+					</div>
 
-                <div>
-                    <SubMenu style={subMenuStyle}/>
-                </div>
+					{ subMenu &&
+						<div>
+							<SubMenu style={subMenuStyle} />
+						</div>
+					}
 
-                <div className={styles.content}>
-                    {children}
-                </div>
-            </div>
-        </div>
-    )
+					<div className={styles.content} style={style ? style : {}}>{children}</div>
+				</div>
+			</div>
+		);
 }
 
 export default Layout;
