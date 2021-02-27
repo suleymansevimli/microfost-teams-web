@@ -49,6 +49,7 @@
         margin-top: 32px;
 
         .about {
+            padding: 10px 10px 0 0;
             height: 600px;
             flex: 1;
             display: flex;
@@ -104,6 +105,39 @@
 
         .description {
             flex: 2;
+            overflow: auto;
+            max-height: 600px;
+
+            .screenshot {
+                flex:1;
+
+                img {
+                    width: 100%;
+                    height: 40%;
+                    object-fit: cover;
+                }
+            }
+
+            .descriptionContent {
+                h4 {
+                    font-weight: 600;
+                    font-size: 18px;
+                    margin: 10px 0 10px 0;
+                }
+
+                p {
+                    line-height: 1.5;
+                }
+
+                .credit {
+                    margin: 20px 0;
+                    p {
+                        color: var(--brand-450);
+                    }
+                }
+
+            }
+
         }
 
     }

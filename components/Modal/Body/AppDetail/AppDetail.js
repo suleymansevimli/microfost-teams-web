@@ -93,10 +93,10 @@ const AppDetail = ({ appId, onModalClose }) => {
 								<h3>About</h3>
 							</div>
 							<div className={styles.menuItem}>
-								<Link href={"/"}>More from Microsoft</Link>
+								<Link href={'/'}>More from Microsoft</Link>
 							</div>
 							<div className={styles.menuItem}>
-								<Link href={"/"}>Permissions</Link>
+								<Link href={'/'}>Permissions</Link>
 							</div>
 						</div>
 					</div>
@@ -105,7 +105,34 @@ const AppDetail = ({ appId, onModalClose }) => {
 					</div>
 				</div>
 				<div className={styles.description}>
-					description
+					<div className={styles.screenshot}>
+						<img src={'/screenshots/app.svg'} alt={app.name} />
+					</div>
+					<div className={styles.descriptionContent}>
+						<h4>Amet justo donec enim diam vulputate ut pharetra sit, mus mauris vitae ultricies leo integer</h4>
+						<p>Diam vulputate ut pharetra sit amet aliquam. A diam sollicitudin tempor id eu nisl nunc mi ipsum. Vel eros donec ac odio tempor orci dapibus. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper. Facilisi morbi tempus iaculis urna id. </p>
+
+						<h4>Tabs</h4>
+						<p>Use in a tab at the top of a chat or channel</p>
+
+						<h4>Bots</h4>
+						<p>Chat with the app to ask questions and find info</p>
+
+						<h4>Messages</h4>
+						<p>Insert content from the app directly into messages</p>
+
+						<h4>Notifications</h4>
+						<p>Get notifications from the app in a channel</p>
+
+						<h4>Personal app</h4>
+						<p>Keep track of important content and info</p>
+
+
+						<div className={styles.credit}>
+							<p> Created by: Tata Consultancy Services </p>
+							<p> Version 1.3 </p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
