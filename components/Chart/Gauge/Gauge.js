@@ -5,7 +5,7 @@ const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 const Gauge = () => {
 
     const config = {
-        series: [40],
+        series: [72],
         options: {
             chart: {
                 type: 'radialBar',
@@ -19,17 +19,21 @@ const Gauge = () => {
                     startAngle: -90,
                     endAngle: 90,
                     track: {
-                        background: "#e7e7e7",
+                        background: "#eee",
                         strokeWidth: '97%',
                         margin: 5, // margin is in pixels
                     },
                     dataLabels: {
                         name: {
-                            show: false
+                            show: true
                         },
                         value: {
-                            offsetY: -2,
-                            fontSize: '22px'
+                            offsetY: -42,
+                            fontSize: '28px',
+                            fontcolor: '#000'
+                        },
+                        style: {
+                            colors: ["#0ff"]
                         }
                     }
                 }
@@ -39,23 +43,18 @@ const Gauge = () => {
                     top: -10
                 }
             },
+            foreColor: '#373d3f',
             fill: {
-                type: 'gradient',
-                gradient: {
-                    shade: 'light',
-                    shadeIntensity: 0.4,
-                    inverseColors: false,
-                    opacityFrom: 1,
-                    opacityTo: 1,
-                    stops: [0, 50, 53, 91]
-                },
+                colors: ['var(--brand-800)']
             },
-            labels: ['Average Results'],
+            labels: ['Value Description'],
         }
     }
 
     return (
-        <Chart width={500} options={config.options} series={config.series} type={'radialBar'}/>
+        <div >
+            <Chart width={500} options={config.options} series={config.series} type={'radialBar'}/>
+        </div>
     )
 }
 
