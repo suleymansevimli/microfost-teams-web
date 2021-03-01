@@ -7,6 +7,7 @@
     width: min-content;
     box-shadow: 0 2px 4px var(--card-shadow);
     padding: 15px 20px;
+    max-width: 450px;
 
     .header {
         display: flex;
@@ -15,7 +16,50 @@
         justify-content: space-between;
 
         .title {
+            flex:1;
+
+            h4 {
+                color: var(--card-title);
+            }
+        }
+
+        .action {
+            flex:1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
 
         }
+    }
+
+    .filters {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 20px 20px 0 20px;
+
+        .filter {
+            font-size: 14px !important;
+            display: block;
+            z-index: 111;
+
+            .filterLink {
+                cursor: pointer;
+
+                &.active {
+                    color: var(--brand-800);
+                    font-weight: 700;
+                }
+
+                &:hover {
+                    color: var(--brand-900);
+                }
+            }
+        }
+    }
+
+    .chart {
+        flex: 1;
     }
 }

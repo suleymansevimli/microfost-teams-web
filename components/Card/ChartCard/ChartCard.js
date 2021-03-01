@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from 'prop-types'
 import style from "./chart-card.module.css"
 import {CommandButton} from "office-ui-fabric-react";
+import cn from 'classnames'
 
 const ChartCard = ({children,title}) => {
 
@@ -13,13 +14,13 @@ const ChartCard = ({children,title}) => {
         items: [
             {
                 key: 'Star',
-                text: 'Like',
-                iconProps: { iconName: 'Star' }
+                text: 'Remove',
+                iconProps: { iconName: 'Cancel' }
             },
             {
                 key: 'Up',
-                text: <span>Z-A Sort</span>,
-                iconProps: { iconName: 'Up' }
+                text: 'Download',
+                iconProps: { iconName: 'Download' }
             }
         ]
     };
@@ -28,12 +29,10 @@ const ChartCard = ({children,title}) => {
         <div className={style.container}>
             <div className={style.header}>
                 <div className={style.title}>
-                    {title}
+                    <h4>{title}</h4>
                 </div>
                 <div className={style.action}>
                     <CommandButton
-                        iconProps={moreIcon}
-                        text=""
                         menuProps={moreIconProps}
                         disabled={false}
                         checked={false}
@@ -41,8 +40,29 @@ const ChartCard = ({children,title}) => {
                     />
                 </div>
             </div>
+            <div className={style.filters}>
+                <div className={style.filter}>
+                    <span className={cn([style.filterLink,style.active])}>
+                        7 days
+                    </span>
+                </div>
+                <div className={style.filter}>
+                    <span className={style.filterLink}>
+                        30 days
+                    </span>
+                </div>
+                <div className={style.filter}>
+                    <span className={style.filterLink}>
+                        60 days
+                    </span>
+                </div>
+            </div>
             <div className={style.chart}>
                 {children}
+            </div>
+
+            <div className={style.information}>
+
             </div>
         </div>
     )
