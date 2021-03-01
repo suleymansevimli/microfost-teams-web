@@ -1,5 +1,6 @@
 import React from "react";
 import dynamic from "next/dynamic";
+import ChartCard from "../../Card/ChartCard/ChartCard";
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 const Gauge = () => {
@@ -52,9 +53,9 @@ const Gauge = () => {
     }
 
     return (
-        <div >
+        <ChartCard title={'Gauge Chart'}>
             <Chart width={500} options={config.options} series={config.series} type={'radialBar'}/>
-        </div>
+        </ChartCard>
     )
 }
 

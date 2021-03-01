@@ -61,6 +61,8 @@
     --app-detail-modal-bottom-privacy-policy-text: #464775;
     --app-detail-modal-description-header: #1F1F1F;
     --app-detail-modal-description: #1F1F1F;
+
+    --chart-card-background: #FAFAFA;
 }
 
 .dark:root {
@@ -125,4 +127,8 @@
     --app-detail-modal-bottom-privacy-policy-text: #9EA2FF;
     --app-detail-modal-description-header: #F0F0F0;
     --app-detail-modal-description: #E0E0E0;
+
+    --chart-card-background: #0F0F0F;
+
+
 }
