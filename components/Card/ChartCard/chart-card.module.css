@@ -62,4 +62,48 @@
     .chart {
         flex: 1;
     }
+
+    .information {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        .informationContainer {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            .label {
+                display: flex;
+                align-items: center;
+
+                &:last-child{
+                    margin-left: 50px;
+                }
+
+                .primarySquare {
+                    height: 10px;
+                    width: 10px;
+                    background: var(--brand-800);
+                }
+
+                .secondarySquare {
+                    height: 10px;
+                    width: 10px;
+                    background: var(--neutral-150);
+                }
+
+                .squareLabel {
+                    margin-left: 15px;
+                }
+            }
+        }
+        .details {
+            margin-top: 25px;
+            span {
+                * {
+                    color: var(--brand-450);
+                }
+            }
+        }
+    }
 }
