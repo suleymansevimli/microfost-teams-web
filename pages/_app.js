@@ -36,7 +36,6 @@ function MyApp({ Component, pageProps }) {
 	// loader
 	React.useEffect(() => {
 		window.addEventListener('load', function () {
-			console.log('load yüklendi')
 			setLoading(false);
 		});
 	}, []);
