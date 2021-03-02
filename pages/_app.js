@@ -35,7 +35,6 @@ function MyApp({ Component, pageProps }) {
 
 	// loader
 	React.useEffect(() => {
-		console.log('effect içerisinde')
 		setLoading(false)
 	}, []);
 
