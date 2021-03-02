@@ -35,10 +35,8 @@ function MyApp({ Component, pageProps }) {
 
 	// loader
 	React.useEffect(() => {
-		window.addEventListener('load', function () {
-			console.log('loaded')
-			setLoading(false);
-		});
+		console.log('effect içerisinde')
+		setLoading(false)
 	}, []);
 
 	Router.onRouteChangeStart = (url) => {
