@@ -1,62 +1,74 @@
-import React from "react";
-import dynamic from "next/dynamic";
-import ChartCard from "../../Card/ChartCard/ChartCard";
-const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
+import React from 'react';
+import PropTypes from 'prop-types';
+import dynamic from 'next/dynamic';
+import ChartCard from '../../Card/ChartCard/ChartCard';
 
-const Gauge = () => {
+const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
-    const config = {
-        series: [72],
-        options: {
-            chart: {
-                type: 'radialBar',
-                offsetY: -20,
-                sparkline: {
-                    enabled: true
-                }
-            },
-            plotOptions: {
-                radialBar: {
-                    startAngle: -90,
-                    endAngle: 90,
-                    track: {
-                        background: "#eee",
-                        strokeWidth: '97%',
-                        margin: 5, // margin is in pixels
-                    },
-                    dataLabels: {
-                        name: {
-                            show: true
-                        },
-                        value: {
-                            offsetY: -42,
-                            fontSize: '28px',
-                            fontcolor: '#000'
-                        },
-                        style: {
-                            colors: ["#0ff"]
-                        }
-                    }
-                }
-            },
-            grid: {
-                padding: {
-                    top: -10
-                }
-            },
-            foreColor: '#373d3f',
-            fill: {
-                colors: ['var(--brand-800)']
-            },
-            labels: ['Value Description'],
-        }
-    }
+const Gauge = ({ title, series, seriesColors, width, trackBackground, labels, filters }) => {
+	const config = {
+		series: [...series],
+		options: {
+			chart: {
+				type: 'radialBar',
+				offsetY: -20,
+				sparkline: {
+					enabled: true
+				}
+			},
+			plotOptions: {
+				radialBar: {
+					startAngle: -90,
+					endAngle: 90,
+					track: {
+						background: trackBackground,
+						strokeWidth: '97%',
+						margin: 5
+					},
+					dataLabels: {
+						enabled: true,
+						name: {
+							show: true
+						},
+						value: {
+							offsetY: -60,
+							fontSize: '28px'
+						}
+					}
+				}
+			},
+			grid: {
+				padding: {
+					top: -10
+				}
+			},
+			fill: {
+				colors: [...seriesColors]
+			},
+			labels: [...labels]
+		}
+	};
 
-    return (
-        <ChartCard title={'Gauge Chart'}>
-            <Chart width={500} options={config.options} series={config.series} type={'radialBar'}/>
-        </ChartCard>
-    )
-}
+	return (
+		<ChartCard title={title} filters={[...filters]} >
+			<Chart width={width} options={config.options} series={config.series} type={'radialBar'} />
+		</ChartCard>
+	);
+};
 
 export default Gauge;
+
+Gauge.propTypes = {
+	title: PropTypes.string.isRequired,
+	series: PropTypes.array.isRequired,
+	seriesColors: PropTypes.array.isRequired,
+	width: PropTypes.number.isRequired,
+	trackBackground: PropTypes.string,
+	labels: PropTypes.array.isRequired
+};
+
+Gauge.defaultProps = {
+	width: 500,
+	trackBackground: '#eee',
+	filters: []
+};

@@ -35,8 +35,15 @@ const AppLayout = ({children}) => {
                     </div>
                 </div>
             </div>
+            <div className={style.content}>
+                {children}
+            </div>
         </Layout>
     )
 }
 
 export default AppLayout;
+
+AppLayout.propTypes = {
+    children: PropTypes.node.isRequired
+}

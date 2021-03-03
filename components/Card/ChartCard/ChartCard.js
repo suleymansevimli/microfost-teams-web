@@ -5,10 +5,7 @@ import {CommandButton} from 'office-ui-fabric-react';
 import cn from 'classnames';
 import {Link} from "office-ui-fabric-react/lib-commonjs";
 
-const ChartCard = ({children, title}) => {
-	const moreIcon = {
-		iconName: 'More'
-	};
+const ChartCard = ({children, title, filters}) => {
 
 	const moreIconProps = {
 		items: [
@@ -27,14 +24,17 @@ const ChartCard = ({children, title}) => {
 
 	return (
 		<div className={style.container}>
+
 			<div className={style.header}>
 				<div className={style.title}>
 					<h4>{title}</h4>
 				</div>
+
 				<div className={style.action}>
 					<CommandButton menuProps={moreIconProps} disabled={false} checked={false} open={true}/>
 				</div>
 			</div>
+
 			<div className={style.filters}>
 				<div className={style.filter}>
 					<span className={cn([style.filterLink, style.active])}>7 days</span>
@@ -46,7 +46,10 @@ const ChartCard = ({children, title}) => {
 					<span className={style.filterLink}>60 days</span>
 				</div>
 			</div>
-			<div className={style.chart}>{children}</div>
+
+			<div className={style.chart}>
+				{children}
+			</div>
 
 			<div className={style.information}>
 				<div className={style.informationContainer}>
@@ -77,3 +80,7 @@ ChartCard.propTypes = {
 	children: PropTypes.node.isRequired,
 	title: PropTypes.string.isRequired
 };
+
+ChartCard.defaultProps = {
+	filters: []
+}
