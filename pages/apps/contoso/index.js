@@ -10,6 +10,7 @@ const Contoso = () => {
                 series={[72]}
                 seriesColors={['var(--brand-800)']}
                 labels={['Small Description']}
+                filters={[]}
             />
         </AppLayout>
     );
