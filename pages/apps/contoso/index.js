@@ -5,6 +5,7 @@ import Gauge from '../../../components/Chart/Gauge/Gauge';
 const Contoso = () => {
     return (
         <AppLayout>
+
             <Gauge
                 title={'Gauge Chart Updated'}
                 series={[72]}

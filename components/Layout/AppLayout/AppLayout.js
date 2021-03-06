@@ -35,6 +35,7 @@ const AppLayout = ({children}) => {
                     </div>
                 </div>
             </div>
+
             <div className={style.content}>
                 {children}
             </div>

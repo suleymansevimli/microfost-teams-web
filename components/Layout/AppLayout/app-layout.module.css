@@ -54,17 +54,23 @@
 
     .actions {
         display: flex;
-        svg {
-            cursor: pointer;
-            height: 20px;
-            width: 20px;
-            color: #242424;
-            margin-right: 25px;
-            transition: 300ms color;
+        .action {
+            svg {
+                cursor: pointer;
+                height: 20px;
+                width: 20px;
+                color: #242424;
+                margin-right: 25px;
+                transition: 300ms color;
 
-            &:hover {
-                color: var(--brand-800);
+                &:hover {
+                    color: var(--brand-800);
+                }
             }
         }
     }
+}
+
+.content {
+    padding: 22px;
 }

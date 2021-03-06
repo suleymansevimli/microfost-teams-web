@@ -1,37 +1,41 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import style from './chart-card.module.css';
-import {CommandButton} from 'office-ui-fabric-react';
+import { IconButton } from 'office-ui-fabric-react';
 import cn from 'classnames';
-import {Link} from "office-ui-fabric-react/lib-commonjs";
+import { Link } from 'office-ui-fabric-react/lib-commonjs';
 
-const ChartCard = ({children, title, filters}) => {
-
+const ChartCard = ({ children, title, filters }) => {
 	const moreIconProps = {
 		items: [
 			{
 				key: 'Star',
 				text: 'Remove',
-				iconProps: {iconName: 'Cancel'}
+				iconProps: { iconName: 'Cancel' }
 			},
 			{
 				key: 'Up',
 				text: 'Download',
-				iconProps: {iconName: 'Download'}
+				iconProps: { iconName: 'Download' }
 			}
 		]
 	};
 
 	return (
 		<div className={style.container}>
-
 			<div className={style.header}>
 				<div className={style.title}>
 					<h4>{title}</h4>
 				</div>
 
 				<div className={style.action}>
-					<CommandButton menuProps={moreIconProps} disabled={false} checked={false} open={true}/>
+					<IconButton
+						iconProps={{ iconName: 'More' }}
+						menuProps={moreIconProps}
+						disabled={false}
+						checked={false}
+						open={true}
+					/>
 				</div>
 			</div>
 
@@ -47,18 +51,16 @@ const ChartCard = ({children, title, filters}) => {
 				</div>
 			</div>
 
-			<div className={style.chart}>
-				{children}
-			</div>
+			<div className={style.chart}>{children}</div>
 
 			<div className={style.information}>
 				<div className={style.informationContainer}>
 					<div className={style.label}>
-						<div className={style.primarySquare}/>
+						<div className={style.primarySquare} />
 						<span className={style.squareLabel}>Label 1</span>
 					</div>
 					<div className={style.label}>
-						<div className={style.secondarySquare}/>
+						<div className={style.secondarySquare} />
 						<span className={style.squareLabel}>Label 2</span>
 					</div>
 				</div>
@@ -68,7 +70,6 @@ const ChartCard = ({children, title, filters}) => {
 						<Link href={'/'}>View Details</Link>
 					</span>
 				</div>
-
 			</div>
 		</div>
 	);
@@ -78,9 +79,10 @@ export default ChartCard;
 
 ChartCard.propTypes = {
 	children: PropTypes.node.isRequired,
-	title: PropTypes.string.isRequired
+	title: PropTypes.string.isRequired,
+	filters: PropTypes.array
 };
 
 ChartCard.defaultProps = {
 	filters: []
-}
+};
