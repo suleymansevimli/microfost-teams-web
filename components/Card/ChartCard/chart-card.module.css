@@ -68,9 +68,10 @@
         width: 100%;
         flex-direction: column;
         .informationContainer {
+            margin-top: 20px;
             display: flex;
             align-items: center;
-            justify-content: flex-start;
+            justify-content: center;
 
             .label {
                 display: flex;
@@ -80,16 +81,9 @@
                     margin-left: 50px;
                 }
 
-                .primarySquare {
+                .square {
                     height: 10px;
                     width: 10px;
-                    background: var(--brand-800);
-                }
-
-                .secondarySquare {
-                    height: 10px;
-                    width: 10px;
-                    background: var(--neutral-150);
                 }
 
                 .squareLabel {

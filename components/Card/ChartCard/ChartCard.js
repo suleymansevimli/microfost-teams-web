@@ -5,21 +5,39 @@ import { IconButton } from 'office-ui-fabric-react';
 import cn from 'classnames';
 import { Link } from 'office-ui-fabric-react/lib-commonjs';
 
-const ChartCard = ({ children, title, filters }) => {
+const ChartCard = ({ children, title, filters, menu, cardLabels }) => {
 	const moreIconProps = {
-		items: [
-			{
-				key: 'Star',
-				text: 'Remove',
-				iconProps: { iconName: 'Cancel' }
-			},
-			{
-				key: 'Up',
-				text: 'Download',
-				iconProps: { iconName: 'Download' }
-			}
-		]
+		items: menu
 	};
+
+	const RenderFilters = () => {
+		if (filters.items.length > 0) {
+			return filters.items.map((e, i) => {
+				if (filters.type === 'day') {
+					return (
+						<div key={i} className={style.filter}>
+							<span className={cn([style.filterLink, e.active ? style.active : ''])} onClick={()=>e.onClick()}>{e.label}</span>
+						</div>
+					);
+				}
+			});
+		}
+
+		return null;
+	};
+
+	const RenderLabels = () => {
+		if ( cardLabels.length > 0 ) {
+			return cardLabels.map((e,i)=>{
+				return (
+					<div key={i} className={style.label}>
+						<div className={style.square} style={e.color ? {backgroundColor: e.color} : {backgroundColor:'var(--brand-100)'}} />
+						<span className={style.squareLabel}>{e.label}</span>
+					</div>
+				)
+			})
+		}
+	}
 
 	return (
 		<div className={style.container}>
@@ -40,29 +58,14 @@ const ChartCard = ({ children, title, filters }) => {
 			</div>
 
 			<div className={style.filters}>
-				<div className={style.filter}>
-					<span className={cn([style.filterLink, style.active])}>7 days</span>
-				</div>
-				<div className={style.filter}>
-					<span className={style.filterLink}>30 days</span>
-				</div>
-				<div className={style.filter}>
-					<span className={style.filterLink}>60 days</span>
-				</div>
+				<RenderFilters/>
 			</div>
 
 			<div className={style.chart}>{children}</div>
 
 			<div className={style.information}>
 				<div className={style.informationContainer}>
-					<div className={style.label}>
-						<div className={style.primarySquare} />
-						<span className={style.squareLabel}>Label 1</span>
-					</div>
-					<div className={style.label}>
-						<div className={style.secondarySquare} />
-						<span className={style.squareLabel}>Label 2</span>
-					</div>
+					<RenderLabels/>
 				</div>
 
 				<div className={style.details}>
@@ -80,9 +83,9 @@ export default ChartCard;
 ChartCard.propTypes = {
 	children: PropTypes.node.isRequired,
 	title: PropTypes.string.isRequired,
-	filters: PropTypes.array
+	filters: PropTypes.object
 };
 
 ChartCard.defaultProps = {
-	filters: []
+	filters: {}
 };

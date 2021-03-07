@@ -5,7 +5,7 @@ import ChartCard from '../../Card/ChartCard/ChartCard';
 
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
-const Gauge = ({ title, series, seriesColors, width, trackBackground, labels, filters }) => {
+const Gauge = ({ title, series, seriesColors, width, trackBackground, labels, filters, menu, cardLabels }) => {
 	const config = {
 		series: [...series],
 		options: {
@@ -28,11 +28,13 @@ const Gauge = ({ title, series, seriesColors, width, trackBackground, labels, fi
 					dataLabels: {
 						enabled: true,
 						name: {
-							show: true
+							show: true,
+							color: 'var(--brand-500)'
 						},
 						value: {
 							offsetY: -60,
-							fontSize: '28px'
+							fontSize: '28px',
+							color:'red'
 						}
 					}
 				}
@@ -50,7 +52,7 @@ const Gauge = ({ title, series, seriesColors, width, trackBackground, labels, fi
 	};
 
 	return (
-		<ChartCard title={title} filters={[...filters]} >
+		<ChartCard title={title} filters={filters} menu={menu} cardLabels={cardLabels} >
 			<Chart width={width} options={config.options} series={config.series} type={'radialBar'} />
 		</ChartCard>
 	);
@@ -64,11 +66,12 @@ Gauge.propTypes = {
 	seriesColors: PropTypes.array.isRequired,
 	width: PropTypes.number.isRequired,
 	trackBackground: PropTypes.string,
-	labels: PropTypes.array.isRequired
+	labels: PropTypes.array.isRequired,
+	filters: PropTypes.object
 };
 
 Gauge.defaultProps = {
 	width: 500,
 	trackBackground: '#eee',
-	filters: []
+	filters: {}
 };
