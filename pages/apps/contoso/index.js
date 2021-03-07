@@ -52,7 +52,8 @@ const Contoso = () => {
 		cardLabels: [
 			{ label: 'Label 1', color: 'var(--brand-800)' },
 			{ label: 'Label 2', color: 'var(--neutral-100)' }
-		]
+		],
+		detailsUrl: '/'
 	};
 
 	return (

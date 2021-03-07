@@ -29,12 +29,12 @@ const Gauge = ({ title, series, seriesColors, width, trackBackground, labels, fi
 						enabled: true,
 						name: {
 							show: true,
-							color: 'var(--brand-500)'
+							color: 'var(--chart-data-label-color)'
 						},
 						value: {
-							offsetY: -60,
-							fontSize: '28px',
-							color:'red'
+							offsetY: -50,
+							fontSize: '50px',
+							color:'var(--chart-value-color)'
 						}
 					}
 				}

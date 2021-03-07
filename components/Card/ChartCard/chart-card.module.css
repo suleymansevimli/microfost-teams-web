@@ -16,7 +16,7 @@
         justify-content: space-between;
 
         .title {
-            flex:1;
+            flex: 1;
 
             h4 {
                 color: var(--card-title);
@@ -24,7 +24,7 @@
         }
 
         .action {
-            flex:1;
+            flex: 1;
             display: flex;
             justify-content: flex-end;
             align-items: flex-end;
@@ -46,9 +46,10 @@
 
             .filterLink {
                 cursor: pointer;
+                color: var(--chart-card-filter-color);
 
                 &.active {
-                    color: var(--brand-800);
+                    color: var(--chart-card-filter-active-color);
                     font-weight: 700;
                 }
 
@@ -67,6 +68,7 @@
         display: flex;
         width: 100%;
         flex-direction: column;
+
         .informationContainer {
             margin-top: 20px;
             display: flex;
@@ -76,8 +78,9 @@
             .label {
                 display: flex;
                 align-items: center;
+                color: var(--chart-card-label-color);
 
-                &:last-child{
+                &:last-child {
                     margin-left: 50px;
                 }
 
@@ -91,8 +94,10 @@
                 }
             }
         }
+
         .details {
             margin-top: 25px;
+
             span {
                 * {
                     color: var(--brand-450);

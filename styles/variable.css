@@ -63,6 +63,11 @@
     --app-detail-modal-description: #1F1F1F;
 
     --chart-card-background: #FAFAFA;
+    --chart-card-filter-color: #1F1F1F;
+    --chart-card-filter-active-color: #464775;
+    --chart-card-label-color: #1F1F1F;
+    --chart-data-label-color: #1F1F1F;
+    --chart-value-color: #1F1F1F;
 }
 
 .dark:root {
@@ -128,7 +133,10 @@
     --app-detail-modal-description-header: #F0F0F0;
     --app-detail-modal-description: #E0E0E0;
 
-    --chart-card-background: #0F0F0F;
-
-
+    --chart-card-background: #1F1F1F;
+    --chart-card-filter-color: #f5f5f5;
+    --chart-card-filter-active-color: #9EA2FF;
+    --chart-card-label-color: #f5f5f5;
+    --chart-data-label-color: #F0F0F0;
+    --chart-value-color: #F0F0F0;
 }
