@@ -16,7 +16,12 @@ const ChartCard = ({ children, title, filters, menu, cardLabels }) => {
 				if (filters.type === 'day') {
 					return (
 						<div key={i} className={style.filter}>
-							<span className={cn([style.filterLink, e.active ? style.active : ''])} onClick={()=>e.onClick()}>{e.label}</span>
+							<span
+								className={cn([style.filterLink, e.active ? style.active : ''])}
+								onClick={() => e.onClick()}
+							>
+								{e.label}
+							</span>
 						</div>
 					);
 				}
@@ -27,17 +32,22 @@ const ChartCard = ({ children, title, filters, menu, cardLabels }) => {
 	};
 
 	const RenderLabels = () => {
-		if ( cardLabels.length > 0 ) {
-			return cardLabels.map((e,i)=>{
+		if (cardLabels.length > 0) {
+			return cardLabels.map((e, i) => {
 				return (
 					<div key={i} className={style.label}>
-						<div className={style.square} style={e.color ? {backgroundColor: e.color} : {backgroundColor:'var(--brand-100)'}} />
+						<div
+							className={style.square}
+							style={
+								e.color ? { backgroundColor: e.color } : { backgroundColor: 'var(--brand-100)' }
+							}
+						/>
 						<span className={style.squareLabel}>{e.label}</span>
 					</div>
-				)
-			})
+				);
+			});
 		}
-	}
+	};
 
 	return (
 		<div className={style.container}>
@@ -58,14 +68,14 @@ const ChartCard = ({ children, title, filters, menu, cardLabels }) => {
 			</div>
 
 			<div className={style.filters}>
-				<RenderFilters/>
+				<RenderFilters />
 			</div>
 
 			<div className={style.chart}>{children}</div>
 
 			<div className={style.information}>
 				<div className={style.informationContainer}>
-					<RenderLabels/>
+					<RenderLabels />
 				</div>
 
 				<div className={style.details}>

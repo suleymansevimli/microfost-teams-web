@@ -5,7 +5,17 @@ import ChartCard from '../../Card/ChartCard/ChartCard';
 
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
-const Gauge = ({ title, series, seriesColors, width, trackBackground, labels, filters, menu, cardLabels }) => {
+const Gauge = ({
+	title,
+	series,
+	seriesColors,
+	width,
+	trackBackground,
+	labels,
+	filters,
+	menu,
+	cardLabels
+}) => {
 	const config = {
 		series: [...series],
 		options: {
@@ -34,7 +44,7 @@ const Gauge = ({ title, series, seriesColors, width, trackBackground, labels, fi
 						value: {
 							offsetY: -50,
 							fontSize: '50px',
-							color:'var(--chart-value-color)'
+							color: 'var(--chart-value-color)'
 						}
 					}
 				}
@@ -52,7 +62,7 @@ const Gauge = ({ title, series, seriesColors, width, trackBackground, labels, fi
 	};
 
 	return (
-		<ChartCard title={title} filters={filters} menu={menu} cardLabels={cardLabels} >
+		<ChartCard title={title} filters={filters} menu={menu} cardLabels={cardLabels}>
 			<Chart width={width} options={config.options} series={config.series} type={'radialBar'} />
 		</ChartCard>
 	);
