@@ -5,17 +5,7 @@ import ChartCard from '../../Card/ChartCard/ChartCard';
 
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
-const Gauge = ({
-	title,
-	series,
-	seriesColors,
-	width,
-	trackBackground,
-	labels,
-	filters,
-	menu,
-	cardLabels
-}) => {
+const Gauge = ({title, series, seriesColors, width, trackBackground, labels, filters, menu, cardLabels, detailUrl}) => {
 	const config = {
 		series: [...series],
 		options: {
@@ -62,7 +52,13 @@ const Gauge = ({
 	};
 
 	return (
-		<ChartCard title={title} filters={filters} menu={menu} cardLabels={cardLabels}>
+		<ChartCard
+			title={title}
+			filters={filters}
+			menu={menu}
+			cardLabels={cardLabels}
+			detailsUrl={detailUrl}
+		>
 			<Chart width={width} options={config.options} series={config.series} type={'radialBar'} />
 		</ChartCard>
 	);
@@ -77,7 +73,8 @@ Gauge.propTypes = {
 	width: PropTypes.number.isRequired,
 	trackBackground: PropTypes.string,
 	labels: PropTypes.array.isRequired,
-	filters: PropTypes.object
+	filters: PropTypes.object,
+	detailsUrl: PropTypes.string.isRequired
 };
 
 Gauge.defaultProps = {

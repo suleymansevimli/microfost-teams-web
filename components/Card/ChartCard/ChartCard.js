@@ -5,7 +5,7 @@ import { IconButton } from 'office-ui-fabric-react';
 import cn from 'classnames';
 import { Link } from 'office-ui-fabric-react/lib-commonjs';
 
-const ChartCard = ({ children, title, filters, menu, cardLabels }) => {
+const ChartCard = ({ children, title, filters, menu, cardLabels, detailsUrl }) => {
 	const moreIconProps = {
 		items: menu
 	};
@@ -80,7 +80,7 @@ const ChartCard = ({ children, title, filters, menu, cardLabels }) => {
 
 				<div className={style.details}>
 					<span>
-						<Link href={'/'}>View Details</Link>
+						<Link href={detailsUrl}>View Details</Link>
 					</span>
 				</div>
 			</div>

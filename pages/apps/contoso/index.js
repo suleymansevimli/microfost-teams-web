@@ -66,6 +66,7 @@ const Contoso = () => {
 				filters={gaugeChart.filters}
 				menu={gaugeChart.menu}
 				cardLabels={gaugeChart.cardLabels}
+				detailsUrl={gaugeChart.detailsUrl}
 			/>
 		</AppLayout>
 	);
