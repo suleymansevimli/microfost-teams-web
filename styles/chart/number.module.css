@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex: 1;
+    padding: 22px;
+    width: 400px;
+    height: 230px;
+
+    .numberContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .number {
+            font-weight: 600;
+            font-size: 22px;
+            color:var(--chart-number-color)
+        }
+
+        .label {
+            margin-top: 5px;
+            font-weight: 400;
+            color:var(--chart-number-label-color)
+        }
+
+        &:first-child{
+            margin-bottom: 35px;
+        }
+    }
+}

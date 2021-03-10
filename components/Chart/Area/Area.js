@@ -77,7 +77,7 @@ const Area = ({
 		<ChartCard title={title} filters={filters} cardLabels={cardLabels}>
 			<Chart
 				width={750}
-				height={200}
+				height={215}
 				options={config.options}
 				series={config.series}
 				type={'area'}

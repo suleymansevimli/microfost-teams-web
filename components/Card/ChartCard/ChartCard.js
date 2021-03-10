@@ -1,17 +1,17 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import PropTypes from 'prop-types';
 import style from './chart-card.module.css';
 import { IconButton } from 'office-ui-fabric-react';
 import cn from 'classnames';
 import { Link } from 'office-ui-fabric-react/lib-commonjs';
-import {ArrowRight, WideArrowRight} from "../../icons";
+import { WideArrowRight } from '../../icons';
 
 const ChartCard = ({ children, title, filters, menu, cardLabels, detailsUrl }) => {
 	const moreIconProps = {
 		items: menu
 	};
 
-	const RenderFilters = () => {
+	const RenderFilters = useCallback(() => {
 		if (filters.items.length > 0) {
 			return filters.items.map((e, i) => {
 				if (filters.type === 'day') {
@@ -30,7 +30,7 @@ const ChartCard = ({ children, title, filters, menu, cardLabels, detailsUrl }) =
 		}
 
 		return null;
-	};
+	},[]);
 
 	const RenderLabels = () => {
 		if (cardLabels.length > 0) {
@@ -48,7 +48,7 @@ const ChartCard = ({ children, title, filters, menu, cardLabels, detailsUrl }) =
 				);
 			});
 		}
-		return null
+		return null;
 	};
 
 	return (
@@ -81,7 +81,9 @@ const ChartCard = ({ children, title, filters, menu, cardLabels, detailsUrl }) =
 				</div>
 
 				<div className={style.details}>
-					<Link href={detailsUrl} className={style.detailLink}><span> View Details </span> <WideArrowRight/> </Link>
+					<Link href={detailsUrl} className={style.detailLink}>
+						<span> View Details </span> <WideArrowRight />{' '}
+					</Link>
 				</div>
 			</div>
 		</div>
@@ -94,7 +96,7 @@ ChartCard.propTypes = {
 	children: PropTypes.node.isRequired,
 	title: PropTypes.string.isRequired,
 	filters: PropTypes.object,
-	cardLabels: PropTypes.array,
+	cardLabels: PropTypes.array
 };
 
 ChartCard.defaultProps = {

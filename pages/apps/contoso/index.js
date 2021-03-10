@@ -3,6 +3,7 @@ import AppLayout from '../../../components/Layout/AppLayout/AppLayout';
 import Gauge from '../../../components/Chart/Gauge/Gauge';
 import Area from '../../../components/Chart/Area/Area';
 import styles from './styles/index.module.css';
+import Number from "../../../components/Chart/Number/Number";
 
 const Contoso = () => {
 	const [series, setSeries] = useState([72]);
@@ -77,8 +78,7 @@ const Contoso = () => {
 			'2018-09-19T04:30:00.000Z',
 			'2018-09-19T05:30:00.000Z',
 			'2018-09-19T06:30:00.000Z'
-		],
-
+		]
 	};
 
 	return (
@@ -94,7 +94,7 @@ const Contoso = () => {
 					cardLabels={gaugeChart.cardLabels}
 					detailsUrl={gaugeChart.detailsUrl}
 				/>
-
+				<Number title={'Number Chart'}/>
 				<Area
 					title={'Area Chart'}
 					series={areaChart.series}

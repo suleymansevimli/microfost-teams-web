@@ -71,6 +71,9 @@
 
     --chart-area-xaxis-color: #292929;
     --chart-area-yaxis-color: #292929;
+
+    --chart-number-color: #292929;
+    --chart-number-label-color: #292929;
 }
 
 .dark:root {
@@ -145,4 +148,7 @@
 
     --chart-area-xaxis-color: #EBEBEB;
     --chart-area-yaxis-color: #EBEBEB;
+
+    --chart-number-color: #EBEBEB;
+    --chart-number-label-color: #EBEBEB;
 }
