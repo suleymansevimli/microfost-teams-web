@@ -4,6 +4,7 @@ import style from './chart-card.module.css';
 import { IconButton } from 'office-ui-fabric-react';
 import cn from 'classnames';
 import { Link } from 'office-ui-fabric-react/lib-commonjs';
+import {ArrowRight, WideArrowRight} from "../../icons";
 
 const ChartCard = ({ children, title, filters, menu, cardLabels, detailsUrl }) => {
 	const moreIconProps = {
@@ -47,6 +48,7 @@ const ChartCard = ({ children, title, filters, menu, cardLabels, detailsUrl }) =
 				);
 			});
 		}
+		return null
 	};
 
 	return (
@@ -79,9 +81,7 @@ const ChartCard = ({ children, title, filters, menu, cardLabels, detailsUrl }) =
 				</div>
 
 				<div className={style.details}>
-					<span>
-						<Link href={detailsUrl}>View Details</Link>
-					</span>
+					<Link href={detailsUrl} className={style.detailLink}><span> View Details </span> <WideArrowRight/> </Link>
 				</div>
 			</div>
 		</div>
@@ -93,9 +93,13 @@ export default ChartCard;
 ChartCard.propTypes = {
 	children: PropTypes.node.isRequired,
 	title: PropTypes.string.isRequired,
-	filters: PropTypes.object
+	filters: PropTypes.object,
+	cardLabels: PropTypes.array,
 };
 
 ChartCard.defaultProps = {
-	filters: {}
+	filters: {
+		items: []
+	},
+	cardLabels: []
 };

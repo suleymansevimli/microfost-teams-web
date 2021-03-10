@@ -68,6 +68,9 @@
     --chart-card-label-color: #1F1F1F;
     --chart-data-label-color: #1F1F1F;
     --chart-value-color: #1F1F1F;
+
+    --chart-area-xaxis-color: #292929;
+    --chart-area-yaxis-color: #292929;
 }
 
 .dark:root {
@@ -139,4 +142,7 @@
     --chart-card-label-color: #f5f5f5;
     --chart-data-label-color: #F0F0F0;
     --chart-value-color: #F0F0F0;
+
+    --chart-area-xaxis-color: #EBEBEB;
+    --chart-area-yaxis-color: #EBEBEB;
 }

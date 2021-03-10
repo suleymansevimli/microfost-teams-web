@@ -7,7 +7,6 @@
     width: min-content;
     box-shadow: 0 2px 4px var(--card-shadow);
     padding: 15px 20px;
-    max-width: 450px;
 
     .header {
         display: flex;
@@ -98,11 +97,20 @@
         .details {
             margin-top: 25px;
 
-            span {
-                * {
-                    color: var(--brand-450);
+            .detailLink{
+                display: flex;
+                align-items: center;
+                color: var(--brand-450);
+
+                span {
+                    font-weight: 600;
+                }
+
+                svg {
+                    margin-left: 5px;
                 }
             }
+
         }
     }
 }
