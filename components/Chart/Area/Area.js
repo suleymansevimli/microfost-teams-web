@@ -69,7 +69,10 @@ const Area = ({
 					format: tooltipFormat
 				}
 			},
-			colors: [...colors]
+			colors: [...colors],
+			legend: {
+				show: false,
+			}
 		}
 	};
 
