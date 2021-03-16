@@ -21,14 +21,15 @@ const Menu = ({ className, style }) => {
 			<div className={styles.top}>
 
 				<MenuItem
+					url={'/dashboard/activity'}
 					active={''}
 					className={styles.menuItem}
-					onClick={()=>alert('menuItem')}
 					title={'Activity'}
 					icon={<Activity />}
 				/>
 
 				<MenuItem
+					url={'/dashboard/chat'}
 					active={''}
 					className={styles.menuItem}
 					onClick={()=>alert('Chat')}
@@ -37,25 +38,25 @@ const Menu = ({ className, style }) => {
 				/>
 
 				<MenuItem
+					url={'/dashboard/chat'}
 					active={''}
 					className={styles.menuItem}
-					onClick={()=>alert('Teams')}
 					title={'Teams'}
 					icon={<Teams />}
 				/>
 
 				<MenuItem
+					url={'/dashboard/calendar'}
 					active={''}
 					className={styles.menuItem}
-					onClick={()=>alert('Calendar')}
 					title={'Calendar'}
 					icon={<Calendar />}
 				/>
 
 				<MenuItem
+					url={'/dashboard/files'}
 					active={''}
 					className={styles.menuItem}
-					onClick={()=>alert('Files')}
 					title={'Files'}
 					icon={<Files />}
 				/>
@@ -75,10 +76,10 @@ const Menu = ({ className, style }) => {
 				/>
 
 				<MenuItem
+					url={'/store'}
 					active={styles.active}
 					className={styles.menuItem}
 					title={'Store'}
-					onClick={()=>alert('Store')}
 					icon={<Store />}
 				/>
 
@@ -86,16 +87,16 @@ const Menu = ({ className, style }) => {
 			<div className={styles.bottom}>
 
 				<MenuItem
+					url={'/help'}
 					active={''}
 					className={styles.menuItem}
-					onClick={()=>alert('Help')}
 					icon={<Help />}
 				/>
 
 				<MenuItem
+					url={'/settings'}
 					active={''}
 					className={styles.menuItem}
-					onClick={()=>alert('Settings')}
 					icon={<Settings />}
 				/>
 
