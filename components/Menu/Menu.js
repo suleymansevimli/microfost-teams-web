@@ -21,47 +21,84 @@ const Menu = ({ className, style }) => {
 			<div className={styles.top}>
 
 				<MenuItem
-					active={styles.active}
+					active={''}
 					className={styles.menuItem}
 					onClick={()=>alert('menuItem')}
 					title={'Activity'}
 					icon={<Activity />}
 				/>
 
-				<div className={styles.menuItem}>
-					<Chat />
-					<span>Chat</span>
-				</div>
-				<div className={styles.menuItem}>
-					<Teams />
-					<span>Teams</span>
-				</div>
-				<div className={styles.menuItem}>
-					<Calendar />
-					<span>Calendar</span>
-				</div>
-				<div className={styles.menuItem}>
-					<Files />
-					<span>Files</span>
-				</div>
-				<div className={styles.menuItem}>
-					<More />
-				</div>
-				<div className={styles.menuItem}>
-					<MenuDivider />
-				</div>
-				<div className={cn([styles.menuItem, styles.active])}>
-					<Store />
-					<span>Store</span>
-				</div>
+				<MenuItem
+					active={''}
+					className={styles.menuItem}
+					onClick={()=>alert('Chat')}
+					title={'Chat'}
+					icon={<Chat />}
+				/>
+
+				<MenuItem
+					active={''}
+					className={styles.menuItem}
+					onClick={()=>alert('Teams')}
+					title={'Teams'}
+					icon={<Teams />}
+				/>
+
+				<MenuItem
+					active={''}
+					className={styles.menuItem}
+					onClick={()=>alert('Calendar')}
+					title={'Calendar'}
+					icon={<Calendar />}
+				/>
+
+				<MenuItem
+					active={''}
+					className={styles.menuItem}
+					onClick={()=>alert('Files')}
+					title={'Files'}
+					icon={<Files />}
+				/>
+
+
+				<MenuItem
+					active={''}
+					className={styles.menuItem}
+					onClick={()=>alert('More')}
+					icon={<More />}
+				/>
+
+				<MenuItem
+					active={''}
+					className={styles.menuItem}
+					icon={<MenuDivider />}
+				/>
+
+				<MenuItem
+					active={styles.active}
+					className={styles.menuItem}
+					title={'Store'}
+					onClick={()=>alert('Store')}
+					icon={<Store />}
+				/>
+
 			</div>
 			<div className={styles.bottom}>
-				<div className={styles.menuItem}>
-					<Help />
-				</div>
-				<div className={styles.menuItem}>
-					<Settings />
-				</div>
+
+				<MenuItem
+					active={''}
+					className={styles.menuItem}
+					onClick={()=>alert('Help')}
+					icon={<Help />}
+				/>
+
+				<MenuItem
+					active={''}
+					className={styles.menuItem}
+					onClick={()=>alert('Settings')}
+					icon={<Settings />}
+				/>
+
 			</div>
 		</div>
 	);
