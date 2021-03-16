@@ -1,21 +1,15 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import styles from './title-bar.module.css';
 import { SearchBox } from 'office-ui-fabric-react/lib-commonjs/SearchBox';
 import { Persona, PersonaPresence, PersonaSize } from 'office-ui-fabric-react/lib-commonjs/Persona';
 import { CommandButton, initializeIcons } from 'office-ui-fabric-react';
 import { ArrowLeft, ArrowRight } from '../icons';
 import ThemeSelect from "../Theme/ThemeSelect";
+import StoreContext from "../../context";
 
 const TitleBar = () => {
 	// icons initialized
 	initializeIcons(undefined, { disableWarnings: true });
-
-	// persona component
-	const examplePersona = {
-		imageUrl:
-			'https://avatars.githubusercontent.com/u/40808249?s=460&u=fef9ef6d701ded44f0631da84834ba99a0ce880e&v=4',
-		imageInitials: 'SS'
-	};
 
 	// dropdown menu
 	const menuProps = {
@@ -43,7 +37,8 @@ const TitleBar = () => {
 	const Personal = () => {
 		return (
 			<Persona
-				{...examplePersona}
+				imageUrl={'https://avatars.githubusercontent.com/u/40808249?s=460&u=fef9ef6d701ded44f0631da84834ba99a0ce880e&v=4'}
+				imageInitials={'SS'}
 				size={PersonaSize.size40}
 				hidePersonaDetails={true}
 				presence={PersonaPresence.online}
@@ -51,6 +46,12 @@ const TitleBar = () => {
 			/>
 		);
 	};
+
+
+	// urls
+	const storeContext = useContext(StoreContext);
+
+	console.log('urls',storeContext.previousUrls)
 
 	return (
 		<div className={styles.titleBar}>

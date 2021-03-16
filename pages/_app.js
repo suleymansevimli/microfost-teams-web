@@ -14,6 +14,7 @@ React.useLayoutEffect = React.useEffect;
 function MyApp({ Component, pageProps }) {
 	const [loading, setLoading] = useState(true);
 	const [theme, setTheme] = useState();
+	const [previousUrl,setUrl] = useState([]);
 
 	// theme
 	const changeTheme = (theme) => {
@@ -44,13 +45,14 @@ function MyApp({ Component, pageProps }) {
 
 	Router.onRouteChangeComplete = (url) => {
 		setLoading(false);
+		setUrl([...previousUrl,url])
 	};
 
 	return loading ? (
 		<Loader theme={theme} />
 	) : (
 		<Provider store={store}>
-			<StoreContext.Provider value={{ theme, changeTheme }}>
+			<StoreContext.Provider value={{ theme, changeTheme, previousUrl }}>
 				<Component {...pageProps} />
 			</StoreContext.Provider>
 		</Provider>
