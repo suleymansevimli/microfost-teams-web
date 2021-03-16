@@ -13,15 +13,21 @@ import {
 	Teams
 } from '../icons';
 import cn from 'classnames';
+import MenuItem from "./MenuItem/MenuItem";
 
 const Menu = ({ className, style }) => {
 	return (
 		<div style={style ? style : {}} className={cn([styles.menu, className ? className : ''])}>
 			<div className={styles.top}>
-				<div className={styles.menuItem}>
-					<Activity />
-					<span>Activity</span>
-				</div>
+
+				<MenuItem
+					active={styles.active}
+					className={styles.menuItem}
+					onClick={()=>alert('menuItem')}
+					title={'Activity'}
+					icon={<Activity />}
+				/>
+
 				<div className={styles.menuItem}>
 					<Chat />
 					<span>Chat</span>

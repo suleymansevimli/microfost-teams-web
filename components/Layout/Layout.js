@@ -7,7 +7,7 @@ import SubMenu from "../SubMenu/SubMenu";
 const Layout = ({children,subMenu,style}) => {
 
     const menuStyle = {height: window.innerHeight - 48, position: 'sticky', top: 48}
-    const subMenuStyle = {height: window.innerHeight-48,position: 'sticky', top: 48}
+    const subMenuStyle = {height: window.innerHeight -48,position: 'sticky', top: 48}
 
     return (
 			<div className={styles.layout}>
