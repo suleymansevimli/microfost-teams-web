@@ -69,7 +69,7 @@ const TitleBar = () => {
 			</div>
 			<div className={styles.profile}>
 				<ThemeSelect/>
-				<CommandButton text={<Personal />} menuProps={menuProps} disabled={false} checked={false} />
+				<CommandButton text={<Personal />} menuProps={menuProps} />
 			</div>
 		</div>
 	);

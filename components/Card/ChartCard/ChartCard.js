@@ -17,10 +17,8 @@ const ChartCard = ({ children, title, filters, menu, cardLabels, detailsUrl }) =
 				if (filters.type === 'day') {
 					return (
 						<div key={i} className={style.filter}>
-							<span
-								className={cn([style.filterLink, e.active ? style.active : ''])}
-								onClick={() => e.onClick()}
-							>
+							<span className={cn([style.filterLink, e.active ? style.active : ''])}
+								onClick={() => e.onClick()} >
 								{e.label}
 							</span>
 						</div>
@@ -96,12 +94,15 @@ ChartCard.propTypes = {
 	children: PropTypes.node.isRequired,
 	title: PropTypes.string.isRequired,
 	filters: PropTypes.object,
-	cardLabels: PropTypes.array
+	cardLabels: PropTypes.array,
+	menu: PropTypes.object,
+	detailsUrl: PropTypes.string
 };
 
 ChartCard.defaultProps = {
 	filters: {
 		items: []
 	},
-	cardLabels: []
+	cardLabels: [],
+	menu : []
 };
