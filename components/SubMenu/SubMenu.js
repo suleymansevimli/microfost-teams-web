@@ -18,9 +18,9 @@ const SubMenu = ({ style }) => {
 	};
 
 	const closeSearch = () => {
-		setShowSearchInput(false)
-		dispatch(searchAsync(""))
-	}
+		setShowSearchInput(false);
+		dispatch(searchAsync(''));
+	};
 
 	const Search = React.useCallback(() => {
 		if (showSearchInput) {
@@ -55,14 +55,14 @@ const SubMenu = ({ style }) => {
 		if (state.searchResults.length > 0) {
 			return state.searchResults.map((e, i) => {
 				return (
-					<>
+					<React.Fragment key={i}>
 						<div className={styles.linkHeader}>
 							<span>{e.category}</span>
 						</div>
 						<div className={styles.subMenuLink}>
 							<span>{e.name}</span>
 						</div>
-					</>
+					</React.Fragment>
 				);
 			});
 		}

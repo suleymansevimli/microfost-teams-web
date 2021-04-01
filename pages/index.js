@@ -1,13 +1,21 @@
 import React from 'react';
 import Layout from '../components/Layout/Layout';
-import Link from 'next/link';
+import MainEmpty from "../components/Empty";
 
 const Home = () => {
 	return (
-		<Layout subMenu>
-			<Link href={'/store'}> Go Store ! </Link>
+		<Layout style={styles.layout}>
+			<MainEmpty/>
 		</Layout>
 	);
 };
 
 export default Home;
+const styles = {
+	layout: {
+		flex: 1,
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'center'
+	}
+}
