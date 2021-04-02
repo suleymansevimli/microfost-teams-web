@@ -74,6 +74,11 @@
 
     --chart-number-color: #292929;
     --chart-number-label-color: #292929;
+
+
+    --empty-header-color: #1F1F1F;
+    --empty-description-color: #1F1F1F;
+
 }
 
 .dark:root {
@@ -151,4 +156,7 @@
 
     --chart-number-color: #EBEBEB;
     --chart-number-label-color: #EBEBEB;
+
+    --empty-header-color: #FAFAFA;
+    --empty-description-color: #FAFAFA;
 }
